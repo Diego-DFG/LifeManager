@@ -1,0 +1,7 @@
+.wrapper {
+    display: flex;
+}
+
+.tarefas {
+    margin: 0 5em;
+}
