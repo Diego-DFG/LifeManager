@@ -9,11 +9,11 @@ class TarefaView {
 
     template(model) {
         return `
-        <table>
+        <table class='table table-bordered'>
             <thead>
                 <tr>
                     <th>DATA</th>
-                    <th>PRODUTO</th>
+                    <th>TITULO</th>
                     <th>QUANTIDADE</th>
                     <th>STATUS</th>
                 </tr>

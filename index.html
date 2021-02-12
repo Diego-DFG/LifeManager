@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-    <div class="wrapper">
-        <div class="tarefas">
-            <h1>Tarefas</h1>
-            <form onsubmit="tarefaController.adiciona(event)">
-                <div>
-                    <label for="data">Data</label>
-                    <input type="date" id="data" required/>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Life Manager</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+        crossorigin="anonymous">
+        <!-- Estilos css -->
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navegacao">
+                <div class="logo">
+                    <span>LifeManager</span>
                 </div>
-                <div>
-                    <label for="titulo">Titulo</label>
-                    <input type="text" id="titulo" required/>
+            </nav>
+            <div class="conteudo">
+                <div class="periodo">
+                    <h1>Período</h1>
+                    <a href="">JANEIRO</a>
+                    <a href="">FEVEREIRO</a>
+                    <a href="">MARÇO</a>
+                    <a href="">ABRIL</a>
+                    <a href="">MAIO</a>
+                    <a href="">JUNHO</a>
+                    <a href="">JULHO</a>
+                    <a href="">AGOSTO</a>
+                    <a href="">SETEMBRO</a>
+                    <a href="">OUTUBRO</a>
+                    <a href="">NOVEMBRO</a>
+                    <a href="">DEZEMBRO</a>
                 </div>
-                <div>
-                    <label for="quantidade">Quantidade</label>
-                    <input type="number" min="1" step="1" value="1" id="quantidade" required/>
+                <div class="tabela_periodos">
+                    <h1>Notas</h1>
                 </div>
-                <div>
-                    <label for="status">Status</label>
-                    <input type="text" id="status" required/>
+                <div class="tarefas">
+                    <h1>Tarefas</h1>
+                    <form onsubmit="tarefaController.adiciona(event)">
+                        <div>
+                            <label for="data">Data</label>
+                            <input type="date" id="data" required/>
+                        </div>
+                        <div>
+                            <label for="titulo">Titulo</label>
+                            <input type="text" id="titulo" required/>
+                        </div>
+                        <div>
+                            <label for="quantidade">Quantidade</label>
+                            <input type="number" min="1" step="1" value="1" id="quantidade" required/>
+                        </div>
+                        <div>
+                            <label for="status">Status</label>
+                            <input type="text" id="status" required/>
+                        </div>
+                        <button id="btn-incluir" type="submit">Incluir</button>
+                        <button onclick="tarefaController.apaga()" id="btn-apagar" type="button">Apagar</button>
+                        <div id="tarefaView"></div>
+                    </form>
                 </div>
-                <button id="btn-incluir" type="submit">Incluir</button>
-                <button onclick="tarefaController.apaga()" id="btn-apagar" type="button">Apagar</button>
-            </form>
-            <div id="tarefaView"></div>
+            </div>
         </div>
-        <div class="compras">
-            <h2>Compras</h2>
-            <form>
-                <div>
-                    <label for="data">Data</label>
-                    <input type="date" id="data" required/>
-                </div>
-                <div>
-                    <label for="produto">Produto</label>
-                    <input type="text" id="produto" required/>
-                </div>
-                <div>
-                    <label for="quantidade">Quantidade</label>
-                    <input type="number" min="1" step="1" id="quantidade" value="1" required/>
-                </div>
-                <div>
-                    <label for="valor">Valor</label>
-                    <input type="text" min="0.01" step="0.01" value="0.0" id="valor" required/>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src='./js/app/models/Tarefa.js'></script>
-    <script src='./js/app/models/ArrayTarefas.js'></script>
-    <script src='./js/app/controllers/TarefaController.js'></script>
-    <script src='./js/app/views/TarefaView.js'></script>
 
-    <script src='./js/app/models/Compras.js'></script>
-    <script>
+        <!-- JS scripts -->
+        <script src='./js/app/models/Tarefa.js'></script>
+        <script src='./js/app/models/ArrayTarefas.js'></script>
+        <script src='./js/app/controllers/TarefaController.js'></script>
+        <script src='./js/app/views/TarefaView.js'></script>
 
-        let tarefaController = new TarefaController();
+        <script>
 
-        let compras = new Compras(new Date(), 'Água', 3, 2);
+            let tarefaController = new TarefaController();
 
-    </script>
-</body>
+        </script>
+    </body>
 </html>

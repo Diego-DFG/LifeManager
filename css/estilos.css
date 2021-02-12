@@ -1,7 +1,54 @@
-.wrapper {
+.wrapper {padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
+            list-style: none; }
+
+.navegacao {
+    height: 80px;
+    border-bottom: 1px solid #222;
+}
+
+.logo span {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 2em;
+    top: 20px;
+}
+
+.conteudo {
     display: flex;
 }
 
+.periodo {
+    width: 20%;
+}
+
+.periodo a {
+    position: relative;
+    line-height: 2em;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+
+.periodo h1, .tabela_periodos h1 {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.tarefas h1, .periodo h1 {
+    padding-bottom: 1em;
+}
+
+.tabela_periodos {
+    width: 40%;
+    border-left: 1px solid #222;
+}
+
 .tarefas {
-    margin: 0 5em;
+    width: 40%;
+    border-left: 1px solid #222;
+    text-align: center;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 1em;
 }
