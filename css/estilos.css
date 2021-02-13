@@ -2,7 +2,7 @@
             list-style: none; }
 
 .navegacao {
-    height: 80px;
+    height: 40px;
     border-bottom: 1px solid #222;
 }
 
@@ -11,12 +11,13 @@
     font-size: 1.5em;
     font-weight: bold;
     padding: 2em;
-    top: 20px;
 }
 
 .conteudo {
     display: flex;
 }
+
+/******* Período **************/
 
 .periodo {
     width: 20%;
@@ -34,6 +35,56 @@
     text-align: center;
     padding-top: 0.5em;
 }
+
+/******* Tabela Periodos **************/
+
+.card_agua {
+    font-weight: bold;
+    padding: 1em;
+}
+
+.tabela_conteudo {
+    position: relative;
+    bottom: 3em;
+}
+
+.semana {
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 0.5em;
+    margin-bottom: 1em;;
+    border-radius: 10px;
+    width: 450px;
+    position: relative;
+    font-weight: bold;
+    left: 3em;
+}
+
+.cardSemana {
+    margin-left: 2em;
+}
+
+.subCardSemana {
+    display: flex;
+}
+
+.card_estudos {
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.card_estudos h4, .cardNotas {
+    text-align: left;
+    margin-left: 1em;;
+}
+
+.subCard {
+    padding-left: 2em;
+    font-size: 0.7em;;
+}
+
+/******* Tarefas **************/
 
 .tarefas h1, .periodo h1 {
     padding-bottom: 1em;
