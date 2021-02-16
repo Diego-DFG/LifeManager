@@ -38,16 +38,17 @@
                     </div>
                 </div>
                 <div class="tabela_periodos">
-                    <div class="card_agua">
-                        <span>Água</span>
-                        <input type="checkbox" />
-                        <input type="checkbox" />
-                        <input type="checkbox" />
-                        <input type="checkbox" />
-                        <input type="checkbox" />
-                        <input type="checkbox" />
-                        <input type="checkbox" />
-                    </div>
+                        <div class="container_card_agua">
+                            <h3>Água</h3>
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <span id="result">0</span>
+                        </div>
                    <div class="tabela_conteudo">
                         <h1>Notas</h1>
                         <div class="semana">
@@ -165,7 +166,14 @@
             </div>
         </div>
 
+        <!----------- Jquery ------------------------------------------------------------>
+		<script src="https://code.jquery.com/jquery-3.5.1.js" 
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+        crossorigin="anonymous">
+        </script>
+
         <!-- JS scripts -->
+        <script src='./js/app/helpers/checkbox-helper.js'></script>
         <script src='./js/app/models/Tarefa.js'></script>
         <script src='./js/app/models/ArrayTarefas.js'></script>
         <script src='./js/app/controllers/TarefaController.js'></script>

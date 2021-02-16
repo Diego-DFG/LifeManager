@@ -46,14 +46,33 @@
 
 /******* Tabela Periodos **************/
 
+.container_card_agua {
+    display: flex;
+    margin: 1em;
+}
+
+.card_agua, #result {
+    position: relative;
+    left: 1em;
+}
+
 .card_agua {
+    top: 1em;
+}
+
+#result {
+    top: 0.3em;
+    font-size: 1.3em;
     font-weight: bold;
-    padding: 1em;
+}
+
+#result {
+    margin-left: 0.5em;;
 }
 
 .tabela_conteudo {
     position: relative;
-    bottom: 3em;
+    bottom: 1em;
 }
 
 .semana {
