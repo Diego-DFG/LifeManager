@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Life Manager</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+        crossorigin="anonymous">
+        <!-- Estilos css -->
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navegacao">
+                <div class="logo">
+                    <span>LifeManager</span>
+                </div>
+            </nav>
+            <div class="conteudo">
+                <div class="periodo">
+                    <h1>Período</h1>
+                    <div class="periodo_meses">
+                        <a href="">JANEIRO</a>
+                        <a href="">FEVEREIRO</a>
+                        <a href="">MARÇO</a>
+                        <a href="">ABRIL</a>
+                        <a href="">MAIO</a>
+                        <a href="">JUNHO</a>
+                        <a href="">JULHO</a>
+                        <a href="">AGOSTO</a>
+                        <a href="">SETEMBRO</a>
+                        <a href="">OUTUBRO</a>
+                        <a href="">NOVEMBRO</a>
+                    <a href="">DEZEMBRO</a>
+                    </div>
+                </div>
+                <div class="tarefas">
+                    <h1>Tarefas</h1>
+                    <form>
+                        <div id="tarefaView"></div>
+                        <button onclick="tarefaController.apaga()" id="btn-apagar" type="button">Apagar</button>
+                    </form>
+                </div>
+                <div class="tabela_periodos">
+                    <form>
+                        <div class="container_card_agua">
+                            <h3>Água</h3>
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <input type="checkbox" class="card_agua" value="1" />
+                            <span  id="result">0</span>
+                        </div>
+                        <div class="tabela_conteudo">
+                            <h1>Notas</h1>
+                            <div class="semana">
+                                <div class="subCardSemana">
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>D</span>
+                                    </div>
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>S</span>
+                                    </div>
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>T</span>
+                                    </div>
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>Q</span>
+                                    </div>
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>Q</span>
+                                    </div>
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>S</span>
+                                    </div>
+                                    <div class="cardSemana">
+                                        <input type="checkbox" />
+                                        <span>S</span>
+                                    </div>
+                                </div>
+                                <div class="cardData">
+                                    <input type="date" id="data">
+                                </div>
+                            </div>
+                            <div id="card_estudos" class="card_estudos">
+                                <h4>ESTUDOS</h4>
+                                <div class="card_01 cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_estudos" />
+                                    <span>JS: MVC, proxy e proxyFactory</span>
+                                </div>
+                                <div class="card_02 cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_estudos" />
+                                    <span>JS: IndexedDB</span>
+                                </div>
+                                <div class="card_03 cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_estudos" />
+                                    <span>ORM com NODEJS</span>
+                                </div>
+                            </div>
+                            <div id="card_projetos" class="card_estudos">
+                                <h4>PROJETOS</h4>
+                                <div class="cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_projetos" />
+                                    <span>Gerenciador</span>
+                                </div>
+                                <div class="cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_projetos" />
+                                    <span>LadingPage Portfolio</span>
+                                </div>
+                                <div class="cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_projetos" />
+                                    <span>Github</span>
+                                </div>
+                            </div>
+                            <div id="card_pessoal" class="card_estudos">
+                                <h4>PESSOAL</h4>
+                                <div class="cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_pessoal" />
+                                    <span>Varrer</span>
+                                </div>
+                                <div class="cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_pessoal" />
+                                    <span>Levar lixo</span>
+                                </div>
+                                <div class="cardNotas">
+                                    <input type="checkbox" id="input_card" class="input__card_pessoal" />
+                                    <span>Lavar louça</span>
+                                    <div class="subCard">
+                                        <input type="checkbox" id="input_card" class="input__card_pessoal" />
+                                        <span>Manhã</span>
+                                        <input type="checkbox" id="input_card" class="input__card_pessoal" />
+                                        <span>Tarde</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="tarefaController.adiciona(event)" id="btn-adicionar" type="submit">
+                            Incluir
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!----------- Jquery ------------------------------------------------------------>
+		<script src="https://code.jquery.com/jquery-3.5.1.js" 
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+        crossorigin="anonymous">
+        </script>
+
+        <!-- JS scripts -->
+        <script src='./js/app/helpers/checkbox-helper.js'></script>
+        <script src='./js/app/models/Tarefa.js'></script>
+        <script src='./js/app/helpers/InputHelper.js'></script>
+        <script src='./js/app/models/ArrayTarefas.js'></script>
+        <script src='./js/app/controllers/TarefaController.js'></script>
+        <script src='./js/app/views/TarefaView.js'></script>
+
+        <script>
+
+            let tarefaController = new TarefaController();
+
+        </script>
+    </body>
+</html>
