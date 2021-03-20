@@ -12,5 +12,18 @@
     somar();
     $(':checkbox').click(somar);
 
+    function inputSemana() {
+        let resultado = $('.input_semana:checked');
+        let total = '';
+
+        for(let i = 0; i < resultado.length; i++) {
+            total += resultado[i].value;
+        }
+
+        $('#label_semana').text(total);
+    }
+    inputSemana();
+    $(':checkbox').click(inputSemana);
+
     
 }(jQuery));

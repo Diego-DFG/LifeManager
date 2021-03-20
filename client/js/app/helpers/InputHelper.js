@@ -8,9 +8,16 @@ class InputHelper {
             let inputCard = e.target;
 
             if(inputCard.checked == true && 
-                inputCard.className === 'input__card_estudos') {
-                    return inputCard.nextElementSibling.textContent;
-            } 
+                inputCard.className === '.input__card_estudos') {
+                    let td = document.createElement('td');
+                    td.textContent = 'Concluído';
+                    checkboxViewEstudos.innerHTML = td.textContent;
+            } else {
+                    let td = document.createElement('td');
+                    td.textContent = '';
+                    td.textContent = 'Em aberto';
+                    checkboxViewEstudos.innerHTML = td.textContent;
+            }
         });
     }
 
@@ -19,8 +26,15 @@ class InputHelper {
             let inputCard = e.target;
 
             if(inputCard.checked == true && 
-                inputCard.className === 'input__card_projetos') {
-                    return inputCard.nextElementSibling.textContent;
+                inputCard.className === '.input__card_projetos') {
+                    let td = document.createElement('td');
+                    td.textContent = 'Concluído';
+                    checkboxViewEstudos.innerHTML = td.textContent;
+            } else {
+                    let td = document.createElement('td');
+                    td.textContent = '';
+                    td.textContent = 'Em aberto';
+                    checkboxViewEstudos.innerHTML = td.textContent;
             }
         });
     }
@@ -30,8 +44,15 @@ class InputHelper {
             let inputCard = e.target;
 
             if(inputCard.checked == true && 
-                inputCard.className === 'input__card_pessoal') {
-                    return inputCard.nextElementSibling.textContent;
+                inputCard.className === '.input__card_pessoal') {
+                    let td = document.createElement('td');
+                    td.textContent = 'Concluído';
+                    checkboxViewEstudos.innerHTML = td.textContent;
+            } else {
+                    let td = document.createElement('td');
+                    td.textContent = '';
+                    td.textContent = 'Em aberto';
+                    checkboxViewEstudos.innerHTML = td.textContent;
             }
         });
     }

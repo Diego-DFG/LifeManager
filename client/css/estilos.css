@@ -94,6 +94,18 @@
     display: flex;
 }
 
+#label_semana {
+    position: relative;
+    left: 10rem;
+    top: 1rem;
+    text-transform: uppercase;
+
+}
+
+#checkViewStatus {
+    color: red;
+}
+
 .cardData {
     border-radius: 10px;
     position: relative;

@@ -25,16 +25,11 @@ class TarefaView {
                     <td>${tarefa.agua}</td>
                     <td>${tarefa.data.getDate()}/
                     ${tarefa.data.getMonth()+1}/
-                    ${tarefa.data.getFullYear()}</td>
-                    <td>${tarefa.estudos}
-                        ${tarefa.estudos}
-                        ${tarefa.estudos}</td>
-                    <td>${tarefa.projetos}
-                        ${tarefa.projetos}
-                        ${tarefa.projetos}</td>
-                    <td>${tarefa.pessoal}
-                        ${tarefa.pessoal}
-                        ${tarefa.pessoal}</td>
+                    ${tarefa.data.getFullYear()} - 
+                    ${tarefa.semana}</td>
+                    <td>${tarefa.estudos} - ${tarefa.status}</td>
+                    <td>${tarefa.projetos} - ${tarefa.status}</td>
+                    <td>${tarefa.pessoal} - ${tarefa.status}</td>
                 </tr>
                 `).join('')}
             </tbody>

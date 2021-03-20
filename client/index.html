@@ -62,87 +62,61 @@
                             <div class="semana">
                                 <div class="subCardSemana">
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Domingo" />
                                         <span>D</span>
                                     </div>
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Segunda" />
                                         <span>S</span>
                                     </div>
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Terça" />
                                         <span>T</span>
                                     </div>
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Quarta" />
                                         <span>Q</span>
                                     </div>
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Quinta" />
                                         <span>Q</span>
                                     </div>
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Sexta" />
                                         <span>S</span>
                                     </div>
                                     <div class="cardSemana">
-                                        <input type="checkbox" />
+                                        <input class="input_semana" type="checkbox" value="Sábado" />
                                         <span>S</span>
                                     </div>
                                 </div>
+                                <label id="label_semana"></label>
                                 <div class="cardData">
                                     <input type="date" id="data">
                                 </div>
                             </div>
-                            <div id="card_estudos" class="card_estudos">
+                            <div onclick="capturaInputEstudos()" id="card_estudos" class="card_estudos">
                                 <h4>ESTUDOS</h4>
-                                <div class="card_01 cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_estudos" />
-                                    <span>JS: MVC, proxy e proxyFactory</span>
-                                </div>
-                                <div class="card_02 cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_estudos" />
-                                    <span>JS: IndexedDB</span>
-                                </div>
-                                <div class="card_03 cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_estudos" />
-                                    <span>ORM com NODEJS</span>
+                                <div id="cardNotas" class="card_01 cardNotas">
+                                    <input  type="checkbox" id="input_card" class="input__card_estudos" />
+                                    <input type="text" id="input__Text_estudos" />
+                                    <div id="checkViewStatus" class="checkViewEstudos"></div>
                                 </div>
                             </div>
-                            <div id="card_projetos" class="card_estudos">
+                            <div onclick="capturaInputProjetos()" id="card_projetos" class="card_estudos">
                                 <h4>PROJETOS</h4>
                                 <div class="cardNotas">
                                     <input type="checkbox" id="input_card" class="input__card_projetos" />
-                                    <span>Gerenciador</span>
-                                </div>
-                                <div class="cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_projetos" />
-                                    <span>LadingPage Portfolio</span>
-                                </div>
-                                <div class="cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_projetos" />
-                                    <span>Github</span>
+                                    <input type="text" id="input__Text_projetos" />
+                                    <div id="checkViewStatus" class="checkViewProjetos"></div>
                                 </div>
                             </div>
-                            <div id="card_pessoal" class="card_estudos">
+                            <div onclick="capturaInputPessoal()" id="card_pessoal" class="card_estudos">
                                 <h4>PESSOAL</h4>
                                 <div class="cardNotas">
                                     <input type="checkbox" id="input_card" class="input__card_pessoal" />
-                                    <span>Varrer</span>
-                                </div>
-                                <div class="cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_pessoal" />
-                                    <span>Levar lixo</span>
-                                </div>
-                                <div class="cardNotas">
-                                    <input type="checkbox" id="input_card" class="input__card_pessoal" />
-                                    <span>Lavar louça</span>
-                                    <div class="subCard">
-                                        <input type="checkbox" id="input_card" class="input__card_pessoal" />
-                                        <span>Manhã</span>
-                                        <input type="checkbox" id="input_card" class="input__card_pessoal" />
-                                        <span>Tarde</span>
-                                    </div>
+                                    <input type="text" id="input__Text_pessoal" />
+                                    <div id="checkViewStatus" class="checkViewPessoal"></div>
                                 </div>
                             </div>
                         </div>
@@ -161,9 +135,9 @@
         </script>
 
         <!-- JS scripts -->
-        <script src='./js/app/helpers/checkbox-helper.js'></script>
         <script src='./js/app/models/Tarefa.js'></script>
-        <script src='./js/app/helpers/InputHelper.js'></script>
+        <script src='./js/app/helpers/checkbox-helper.js'></script>
+        <script src='./js/app/helpers/capturaValorInput-helper.js'></script>
         <script src='./js/app/models/ArrayTarefas.js'></script>
         <script src='./js/app/controllers/TarefaController.js'></script>
         <script src='./js/app/views/TarefaView.js'></script>
