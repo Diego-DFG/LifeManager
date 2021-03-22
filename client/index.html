@@ -23,22 +23,47 @@
                 <div class="periodo">
                     <h1>Período</h1>
                     <div class="periodo_meses">
-                        <a href="">JANEIRO</a>
-                        <a href="">FEVEREIRO</a>
-                        <a href="">MARÇO</a>
-                        <a href="">ABRIL</a>
-                        <a href="">MAIO</a>
-                        <a href="">JUNHO</a>
-                        <a href="">JULHO</a>
-                        <a href="">AGOSTO</a>
-                        <a href="">SETEMBRO</a>
-                        <a href="">OUTUBRO</a>
-                        <a href="">NOVEMBRO</a>
-                    <a href="">DEZEMBRO</a>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosJaneiro()">Janeiro</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosFevereiro()">Fevereiro</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosMarço()">Março</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Abril</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosMaio()">Maio</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosJunho()">Junho</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosJulho()">Julho</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosAgosto()">Agosto</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosSetembro()">Setembro</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosOutubro()">Outubro</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosNovembro()">Novembro</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosDezembro()">Dezembro</a></td>
+                        </tr>
                     </div>
                 </div>
                 <div class="tarefas">
                     <h1>Tarefas</h1>
+                    <div id="mensagemView"></div>
                     <form>
                         <div id="tarefaView"></div>
                         <button onclick="tarefaController.apaga()" id="btn-apagar" type="button">Apagar</button>
@@ -100,7 +125,7 @@
                                 <div id="cardNotas" class="card_01 cardNotas">
                                     <input  type="checkbox" id="input_card" class="input__card_estudos" />
                                     <input type="text" id="input__Text_estudos" />
-                                    <div id="checkViewStatus" class="checkViewEstudos"></div>
+                                    <div id="checkEstudos" class="checkViewEstudos"></div>
                                 </div>
                             </div>
                             <div onclick="capturaInputProjetos()" id="card_projetos" class="card_estudos">
@@ -108,7 +133,7 @@
                                 <div class="cardNotas">
                                     <input type="checkbox" id="input_card" class="input__card_projetos" />
                                     <input type="text" id="input__Text_projetos" />
-                                    <div id="checkViewStatus" class="checkViewProjetos"></div>
+                                    <div id="checkProjetos" class="checkViewProjetos"></div>
                                 </div>
                             </div>
                             <div onclick="capturaInputPessoal()" id="card_pessoal" class="card_estudos">
@@ -116,7 +141,7 @@
                                 <div class="cardNotas">
                                     <input type="checkbox" id="input_card" class="input__card_pessoal" />
                                     <input type="text" id="input__Text_pessoal" />
-                                    <div id="checkViewStatus" class="checkViewPessoal"></div>
+                                    <div id="checkPessoal" class="checkViewPessoal"></div>
                                 </div>
                             </div>
                         </div>
@@ -136,12 +161,17 @@
 
         <!-- JS scripts -->
         <script src='./js/app/models/Tarefa.js'></script>
+        <script src='./js/app/helpers/DateHelper.js'></script>
         <script src='./js/app/helpers/checkbox-helper.js'></script>
         <script src='./js/app/helpers/capturaValorInput-helper.js'></script>
         <script src='./js/app/models/ArrayTarefas.js'></script>
         <script src='./js/app/controllers/TarefaController.js'></script>
         <script src='./js/app/views/TarefaView.js'></script>
-
+        <script src='./js/app/models/Mensagem.js'></script>
+        <script src='./js/app/views/MensagemViewSucess.js'></script>
+        <script src='./js/app/views/MensagemViewError.js'></script>
+        <script src='./js/app/services/HttpService.js'></script>
+        <script src='./js/app/services/RegistrosService.js'></script>
         <script>
 
             let tarefaController = new TarefaController();

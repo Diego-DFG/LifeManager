@@ -1,17 +1,16 @@
 class Tarefa {
-    constructor(agua, data, semana, estudos, projetos, pessoal, status) {
-        this._agua = agua;
+    constructor(data, semana, estudos, projetos, pessoal, statusEstudos,statusProjetos, statusPessoal, agua) 
+    {
         this._data = new Date(data.getTime());
         this._semana = semana;
         this._estudos = estudos;
         this._projetos = projetos;
         this._pessoal = pessoal;
-        this._status = status;
+        this._statusEstudos = statusEstudos;
+        this._statusProjetos = statusProjetos;
+        this._statusPessoal = statusPessoal;
+        this._agua = agua;
         Object.freeze(this);
-    }
-
-    get agua() {
-        return this._agua;
     }
 
     get data() {
@@ -34,8 +33,20 @@ class Tarefa {
         return this._pessoal;
     }
 
-    get status() {
-        return this._status;
+    get statusEstudos() {
+        return this._statusEstudos;
+    }
+
+    get statusProjetos() {
+        return this._statusProjetos;
+    }
+
+    get statusPessoal() {
+        return this._statusPessoal;
+    }
+
+    get agua() {
+        return this._agua;
     }
 
 }

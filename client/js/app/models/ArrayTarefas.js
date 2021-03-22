@@ -1,10 +1,12 @@
 class ArrayTarefas {
-    constructor() {
+    constructor(armadilhas) {
         this._tarefas = [];
+        this._armadilhas = armadilhas;
     }
 
     adiciona(tarefa) {
         this._tarefas.push(tarefa);
+        this._armadilhas(this);
     }
 
     get tarefas() {
@@ -13,5 +15,6 @@ class ArrayTarefas {
 
     esvazia() {
         this._tarefas = [];
+        this._armadilhas(this);
     }
 }

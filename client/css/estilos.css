@@ -21,13 +21,14 @@
 
 .periodo {
     width: 15%;
+    border-right: 1px solid #222;
 }
 
 .periodo_meses {
     border: 1px solid rgba(0,0,0,0.3);
     border-radius: 10px;
     position: relative;
-    left: 70px;
+    left: 45px;
     width: 50%;
 }
 
@@ -153,7 +154,7 @@
 .tabela_periodos {
     width: 35%;
     border-left: 1px solid #222;
-    border-right: 1px solid #222;
+   
 }
 
 .tarefas {
