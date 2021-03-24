@@ -6,11 +6,9 @@ class TarefaController {
         this._inputAgua = $('#result');
         this._inputData = $('#data');
         this._inputSemana = $('#label_semana');
-        
         this._inputEstudos = $('#input__Text_estudos');
         this._inputProjetos = $('#input__Text_projetos');
         this._inputPessoal = $('#input__Text_pessoal');
-
         this._inputStatusEstudos = $('#checkEstudos');
         this._inputStatusProjetos = $('#checkProjetos');
         this._inputStatusPessoal = $('#checkPessoal');
@@ -66,7 +64,7 @@ class TarefaController {
 		let registros = new RegistrosService();
 
 		registros
-			.obterRegistrosJan()
+			.obterRegistrosJan(dia)
 			.then(registros => {
 				console.log(registros);
 	            registros

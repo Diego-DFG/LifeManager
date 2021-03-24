@@ -1,41 +1,55 @@
 .wrapper {padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
-            list-style: none; }
+            list-style: none; font-family: 'Open Sans', sans-serif; }
+
+body {
+    height: 800px;
+    box-sizing: border-box;
+}
 
 .navegacao {
-    height: 40px;
-    border-bottom: 1px solid #222;
+    height: 5%;
+    border-bottom: 1px solid #555;
+    background: #333;
 }
+
+.conteudo {
+    height: 95%;
+    display: flex;
+    background: #333;
+}
+
+/* Navegação */
 
 .logo span {
     position: relative;
     font-size: 1.5em;
     font-weight: bold;
     padding: 2em;
-}
-
-.conteudo {
-    display: flex;
+    color: #fff;
+    font-family: 'Lobster', cursive;
 }
 
 /******* Período **************/
 
 .periodo {
     width: 15%;
-    border-right: 1px solid #222;
+    background: #444;
+    color: #fff;
+    border-right: 1px solid #555;
 }
 
 .periodo_meses {
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid #fff;
     border-radius: 10px;
     position: relative;
-    left: 45px;
-    width: 50%;
+    left: 30px;
+    width: 60%;
 }
 
 .periodo a {
     position: relative;
     line-height: 2em;
-    color: #222;
+    color: #fff;
     display: block;
     text-align: center;
 }
@@ -43,32 +57,57 @@
 .periodo h1, .tabela_periodos h1 {
     text-align: center;
     padding-top: 0.5em;
+    font-weight: bold;
 }
 
 /******* Tabela Periodos **************/
+
+.tabela_periodos { 
+    background: #444;
+    border-left: 1px solid #555;
+}
 
 .container_card_agua {
     display: flex;
     margin: 0.5em;
 }
 
+.container_card_agua h3 {
+    color: #fff;
+    font-weight: bold;
+}
+
 .card_agua, #result {
     position: relative;
     left: 1em;
+    color: greenyellow;
 }
 
 .card_agua {
     top: 1em;
+    margin-left: 0.8rem;
+    z-index: 9999;
+}
+
+.glass {
+    color: #fff;
+    position: relative;
+    left: 0.1rem;
+    top: 0.5rem;
+}
+
+.cardNotas {
+    color: #fff;;
 }
 
 #result {
-    top: 0.3em;
-    font-size: 1.3em;
+    top: 0.1em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 #result {
-    margin-left: 0.5em;;
+    margin-left: 1em;;
 }
 
 .tabela_conteudo {
@@ -76,8 +115,12 @@
     bottom: 1em;
 }
 
+.tabela_conteudo h1, .tabela_conteudo h4 {
+    color: #fff;
+    font-weight: bold;
+}
+
 .semana {
-    border: 1px solid rgba(0,0,0,0.3);
     padding: 0.5em;
     margin-bottom: 1em;;
     border-radius: 10px;
@@ -89,6 +132,11 @@
 
 .cardSemana {
     margin-left: 1.5rem;
+    color: #fff;
+}
+
+.cardSemana input:checked {
+    background: #fff;
 }
 
 .subCardSemana {
@@ -100,7 +148,7 @@
     left: 10rem;
     top: 1rem;
     text-transform: uppercase;
-
+    color: #fff;
 }
 
 #checkViewStatus {
@@ -119,7 +167,7 @@
 }
 
 .card_estudos {
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid #fff;
     margin-bottom: 1em;
     position: relative;
     left: 7rem;
@@ -129,6 +177,8 @@
     padding: 1em 0;
 }
 
+.card_estudos .input 
+{ position: relative; right: 0.5rem; }
 
 .card_estudos h4, .cardNotas {
     text-align: left;
@@ -142,7 +192,7 @@
 #btn-adicionar {
     position: relative;
     left: 11.5rem;
-    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 /******* Tarefas **************/
@@ -153,14 +203,34 @@
 
 .tabela_periodos {
     width: 35%;
-    border-left: 1px solid #222;
    
 }
 
 .tarefas {
     width: 55%;
     text-align: center;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     padding: 1em;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table {
+    color: #444; 
+    font-weight: bold;
+    background: #fff;
+}
+
+.mensagem_sucesso {
+    background: green;
+    border-radius: 10px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+.mensagem_sucesso p {
+    position: relative;
+    top: 35%;
 }

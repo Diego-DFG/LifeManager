@@ -8,6 +8,6 @@ class MensagemViewSucess {
     }
 
     template(model) {
-        return model.texto ? `<p class="alert alert-info">${model.texto}</p>`: '<p></p>';
+        return model.texto ? `<div class="mensagem_sucesso"><p>${model.texto}</p></div>`: '<div><p></p></div>';
     }
 }
