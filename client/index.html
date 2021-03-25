@@ -34,47 +34,65 @@
                     <div class="periodo_meses">
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosJaneiro()">Janeiro</a></td>
-                            <input type="number" id="periodo_dia" style="width: 50px; position: relative; left: 25px;" />
-                            <button onclick="registroDiarioMarcoController.importaRegistrosDiaVinteDois()" style="width: 50px;" type="button">Inserir</button>
+                            <input type="number" class="periodo_dia"/>
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosFevereiro()">Fevereiro</a></td>
+                            <input type="number" class="periodo_dia"/>
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosMarço()">Março</a></td>
-                            <input type="number" id="periodo_dia_marco" style="width: 50px; position: relative; left: 25px;" />
-                            <button onclick="registroDiarioMarcoController.importaRegistros()" style="width: 50px;" type="button">Inserir</button>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosMarco()">Março</a></td>
+                            <input type="number" id="periodo_dia_marco"  class="periodo_dia"/>
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Abril</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="">Maio</a></td>
                             <td >
-                                <input type="number" id="periodo_dia_maio" style="width: 50px; position: relative; left: 25px;" />
-                                <button onclick="tarefaController.importaRegistrosMaio(event)" style="width: 50px;" type="submit">Inserir</button>
+                                <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Maio</a></td>
+                                <input type="number" class="periodo_dia" />
+                                <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                             </td>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosJunho()">Junho</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosJulho()">Julho</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosAgosto()">Agosto</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosSetembro()">Setembro</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosOutubro()">Outubro</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosNovembro()">Novembro</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                         <tr>
                             <td><a href="#" onclick="tarefaController.importaRegistrosDezembro()">Dezembro</a></td>
+                            <input type="number" class="periodo_dia" />
+                            <button onclick="registroDiarioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
                         </tr>
                     </div>
                 </div>
@@ -83,7 +101,9 @@
                     <div id="mensagemView"></div>
                     <form>
                         <div id="tarefaView"></div>
-                        <button onclick="tarefaController.apaga()" id="btn-apagar" class="btn btn-success" type="button">Apagar</button>
+                        <button onclick="tarefaController.apaga();registroDiarioController.apaga()" id="btn-apagar" class="btn btn-success" type="button">
+                            Apagar
+                        </button>
                     </form>
                 </div>
                 <div class="tabela_periodos container">
@@ -193,7 +213,7 @@
         <script src='./js/app/helpers/capturaValorInput-helper.js'></script>
         <script src='./js/app/models/ArrayTarefas.js'></script>
         <script src='./js/app/controllers/TarefaController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioMarcoController.js'></script>
+        <script src='./js/app/controllers/RegistroDiarioController.js'></script>
         <script src='./js/app/views/TarefaView.js'></script>
         <script src='./js/app/models/Mensagem.js'></script>
         <script src='./js/app/views/MensagemViewSucess.js'></script>
@@ -205,7 +225,7 @@
 
             let tarefaController = new TarefaController();
 
-            let registroDiarioMarcoController = new RegistroDiarioMarcoController();
+            let registroDiarioController = new RegistroDiarioController();
 
         </script>
     </body>

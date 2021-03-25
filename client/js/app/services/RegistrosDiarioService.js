@@ -45,7 +45,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaTres(dia) {
+    obterRegistrosDiaTres(dia) {
 
 		return this._http
 				.get('/registros')
@@ -66,7 +66,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaQuatro(dia) {
+    obterRegistrosDiaQuatro(dia) {
 
 		return this._http
 				.get('/registros')
@@ -87,7 +87,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaCinco(dia) {
+    obterRegistrosDiaCinco(dia) {
 
 		return this._http
 				.get('/registros')
@@ -108,7 +108,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaSeis(dia) {
+    obterRegistrosDiaSeis(dia) {
 
 		return this._http
 				.get('/registros')
@@ -129,7 +129,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaSete(dia) {
+    obterRegistrosDiaSete(dia) {
 
 		return this._http
 				.get('/registros')
@@ -150,7 +150,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaOito(dia) {
+    obterRegistrosDiaOito(dia) {
 
 		return this._http
 				.get('/registros')
@@ -171,7 +171,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaNove(dia) {
+    obterRegistrosDiaNove(dia) {
 
 		return this._http
 				.get('/registros')
@@ -192,7 +192,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaDez(dia) {
+    obterRegistrosDiaDez(dia) {
 
 		return this._http
 				.get('/registros')
@@ -213,7 +213,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaOnze(dia) {
+    obterRegistrosDiaOnze(dia) {
 
 		return this._http
 				.get('/registros')
@@ -234,7 +234,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaDoze(dia) {
+    obterRegistrosDiaDoze(dia) {
 
 		return this._http
 				.get('/registros')
@@ -255,7 +255,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaTreze(dia) {
+    obterRegistrosDiaTreze(dia) {
 
 		return this._http
 				.get('/registros')
@@ -276,7 +276,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaQuatorze(dia) {
+    obterRegistrosDiaQuatorze(dia) {
 
 		return this._http
 				.get('/registros')
@@ -296,28 +296,7 @@ class RegistrosDiarioService {
 	                throw new Error('Não foi possível obter os registros!');
 	            }); 
 	}
-    obterRegistrosDiaDiaQuinze(dia) {
-
-		return this._http
-				.get('/registros')
-				.then(registros => 
-         			registros.map(objeto => 
-         				new Tarefa(
-							new Date(objeto._data), 
-							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
-								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
-				.then(registros => {
-	                return registros.filter(registro => 
-	                   		 registro._data.getUTCDate() == dia);
-				})
-	            .catch(erro => {
-	                console.log(erro);
-	                throw new Error('Não foi possível obter os registros!');
-	            }); 
-	}
-
-    obterRegistrosDiaDiaDezesseis(dia) {
+    obterRegistrosDiaQuinze(dia) {
 
 		return this._http
 				.get('/registros')
@@ -338,7 +317,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaDezessete(dia) {
+    obterRegistrosDiaDezesseis(dia) {
 
 		return this._http
 				.get('/registros')
@@ -359,7 +338,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaDezoito(dia) {
+    obterRegistrosDiaDezessete(dia) {
 
 		return this._http
 				.get('/registros')
@@ -380,7 +359,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaDezenove(dia) {
+    obterRegistrosDiaDezoito(dia) {
 
 		return this._http
 				.get('/registros')
@@ -401,7 +380,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinte(dia) {
+    obterRegistrosDiaDezenove(dia) {
 
 		return this._http
 				.get('/registros')
@@ -422,7 +401,28 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteUm(dia) {
+    obterRegistrosDiaVinte(dia) {
+
+		return this._http
+				.get('/registros')
+				.then(registros => 
+         			registros.map(objeto => 
+         				new Tarefa(
+							new Date(objeto._data), 
+							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
+								objeto._statusEstudos, objeto._statusProjetos, 
+									objeto._statusPessoal, objeto._agua)))
+				.then(registros => {
+	                return registros.filter(registro => 
+	                   		 registro._data.getUTCDate() == dia);
+				})
+	            .catch(erro => {
+	                console.log(erro);
+	                throw new Error('Não foi possível obter os registros!');
+	            }); 
+	}
+
+    obterRegistrosDiaVinteUm(dia) {
 
 		return this._http
 				.get('/registros')
@@ -456,7 +456,7 @@ class RegistrosDiarioService {
 									objeto._statusPessoal, objeto._agua)))
 				.then(registros => {
 	                return registros.filter(registro => 
-	                   		 registro._data.getUTCDate() == dia);
+	                   		 registro._data.getMonth() == 2);
 				})
 	            .catch(erro => {
 	                console.log(erro);
@@ -464,7 +464,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteTres(dia) {
+    obterRegistrosDiaVinteTres(dia) {
 
 		return this._http
 				.get('/registros')
@@ -485,7 +485,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteQuatro(dia) {
+    obterRegistrosDiaVinteQuatro(dia) {
 
 		return this._http
 				.get('/registros')
@@ -506,7 +506,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteCinco(dia) {
+    obterRegistrosDiaVinteCinco(dia) {
 
 		return this._http
 				.get('/registros')
@@ -527,7 +527,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteSeis(dia) {
+    obterRegistrosDiaVinteSeis(dia) {
 
 		return this._http
 				.get('/registros')
@@ -548,7 +548,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteSete(dia) {
+    obterRegistrosDiaVinteSete(dia) {
 
 		return this._http
 				.get('/registros')
@@ -569,7 +569,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteOito(dia) {
+    obterRegistrosDiaVinteOito(dia) {
 
 		return this._http
 				.get('/registros')
@@ -590,7 +590,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaVinteNove(dia) {
+    obterRegistrosDiaVinteNove(dia) {
 
 		return this._http
 				.get('/registros')
@@ -611,7 +611,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaTrinta(dia) {
+    obterRegistrosDiaTrinta(dia) {
 
 		return this._http
 				.get('/registros')
@@ -632,7 +632,7 @@ class RegistrosDiarioService {
 	            }); 
 	}
 
-    obterRegistrosDiaDiaTrinta_e_um(dia) {
+    obterRegistrosDiaTrinta_e_um(dia) {
 
 		return this._http
 				.get('/registros')

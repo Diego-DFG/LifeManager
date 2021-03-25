@@ -106,7 +106,7 @@ class TarefaController {
 		
 	}
 
-	importaRegistrosMarço() {
+	importaRegistrosMarco() {
 
 		event.preventDefault();
 

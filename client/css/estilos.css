@@ -46,6 +46,18 @@ body {
     width: 60%;
 }
 
+.periodo_dia {
+    width: 50px; 
+    position: relative; 
+    left: 25px;
+}
+
+.btn-inserirDia {
+    width: 50px; 
+    position: relative; 
+    left: 25px;
+}
+
 .periodo a {
     position: relative;
     line-height: 2em;

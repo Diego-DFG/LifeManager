@@ -1,14 +1,14 @@
 const conexao = require('../../infraestrutura/conexao');
 
 class Nota {
-    adiciona(nota) {
+    adiciona(nota, res) {
         const sql = 'INSERT INTO manager SET ?'
 
         conexao.query(sql, nota, (erro, resultados) => {
             if(erro) {
-                console.log(erro)
+                res.status(500).json(erro)
             } else {
-                console.log(resultados)
+                res.status(200).json(resultados)
             }
         })
     }
