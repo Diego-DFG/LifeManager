@@ -29,7 +29,8 @@ class TarefaView {
                     <td>${tarefa.estudos} - ${tarefa.statusEstudos}</td>
                     <td>${tarefa.projetos} - ${tarefa.statusProjetos}</td>
                     <td>${tarefa.pessoal} - ${tarefa.statusPessoal}</td>
-                    <td>${tarefa.agua}</td>
+                    <td>${tarefa.agua}<i onclick="registroDiarioController.deletaRegistro()" 
+                    class="lixeira fas fa-trash-alt"></></td>
                 </tr>
                 `).join('')}
             </tbody>
@@ -38,6 +39,9 @@ class TarefaView {
                 <td class="table-active">${model.tarefas.reduce((total, n) => total + n.agua, 0)}</td>
             </tfoot>
         </table>
+        <script>
+                let registroDiarioController = new RegistroDiarioController();
+        </script>
         `;
     }
 }

@@ -101,6 +101,13 @@ body {
     z-index: 9999;
 }
 
+.lixeira {
+    position: relative;
+    top: 40px;
+    right: 10px;
+    cursor: pointer;
+}
+
 .glass {
     color: #fff;
     position: relative;
