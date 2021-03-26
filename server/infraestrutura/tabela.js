@@ -7,7 +7,6 @@ class Tabela {
 
     criaTabela() {
         const sql = `CREATE TABLE IF NOT EXISTS manager(
-            id int NOT NULL AUTO_INCREMENT,
             _data datetime NOT NULL,
             _semana varchar(20) NOT NULL,
             _estudos varchar(50) NOT NULL,
@@ -17,6 +16,7 @@ class Tabela {
             _statusProjetos varchar(20) NOT NULL,
             _statusPessoal varchar(20) NOT NULL,
             _agua int NOT NULL,
+            id int NOT NULL AUTO_INCREMENT,
             PRIMARY KEY(id)
         )`;
 

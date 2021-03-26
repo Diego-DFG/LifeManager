@@ -29,7 +29,7 @@
                 </div>
             </nav>
             <div class="conteudo">
-                <div class="periodo container">
+                <div id="periodo" class="periodo container">
                     <h1>PERÍODO</h1>
                     <div class="periodo_meses">
                         <tr>
@@ -96,20 +96,20 @@
                         </tr>
                     </div>
                 </div>
-                <div class="tarefas container">
+                <div id="tarefas" class="tarefas container">
                     <h1>TAREFAS</h1>
                     <div id="mensagemView"></div>
                     <form>
                         <div id="tarefaView"></div>
                         <button onclick="tarefaController.apaga();registroDiarioController.apaga()" id="btn-apagar" class="btn btn-success" type="button">
-                            Apagar
+                            Limpar
                         </button>
                     </form>
                 </div>
-                <div class="tabela_periodos container">
+                <div id="tabela_periodos" class="tabela_periodos container">
                     <form>
                         <div class="container_card_agua">
-                            <h3>Água</h3>
+                            <h4>Água</h4>
                             <input type="checkbox" id="cardAgua" class="card_agua" value="1" />
                             <i class="glass fas fa-glass-whiskey fa-1x"></i>
                             <input type="checkbox" class="card_agua" value="1" />
@@ -210,6 +210,7 @@
         <script src='./js/app/models/Tarefa.js'></script>
         <script src='./js/app/helpers/DateHelper.js'></script>
         <script src='./js/app/helpers/checkbox-helper.js'></script>
+        <script src='./js/app/helpers/cor-status-helper.js'></script>
         <script src='./js/app/helpers/capturaValorInput-helper.js'></script>
         <script src='./js/app/models/ArrayTarefas.js'></script>
         <script src='./js/app/controllers/TarefaController.js'></script>

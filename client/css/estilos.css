@@ -6,6 +6,20 @@ body {
     box-sizing: border-box;
 }
 
+/* Estilos geraid */
+
+/*cores*/
+
+.textoVerde {
+    color: green;
+}
+
+.textoVermelho {
+    color: red;
+}
+
+/*Navegação*/
+
 .navegacao {
     height: 5%;
     border-bottom: 1px solid #555;
@@ -14,8 +28,33 @@ body {
 
 .conteudo {
     height: 95%;
+    width: 100%;
     display: flex;
     background: #333;
+}
+
+#periodo {
+    width: 15%;
+    background: #444;
+    color: #fff;
+    border-right: 1px solid #555;
+}
+
+#tarefas {
+    width: 60%;
+    text-align: center;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1em;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+#tabela_periodos { 
+    background: #444;
+    border-left: 1px solid #555;
+    width: 25%;
 }
 
 /* Navegação */
@@ -31,12 +70,7 @@ body {
 
 /******* Período **************/
 
-.periodo {
-    width: 15%;
-    background: #444;
-    color: #fff;
-    border-right: 1px solid #555;
-}
+
 
 .periodo_meses {
     border: 1px solid #fff;
@@ -74,59 +108,43 @@ body {
 
 /******* Tabela Periodos **************/
 
-.tabela_periodos { 
-    background: #444;
-    border-left: 1px solid #555;
-}
+
 
 .container_card_agua {
     display: flex;
     margin: 0.5em;
 }
 
-.container_card_agua h3 {
+.container_card_agua h4 {
     color: #fff;
     font-weight: bold;
+    position: relative;
+    right: 10px;
 }
 
 .card_agua, #result {
     position: relative;
-    left: 1em;
+    right: 0.2em;
     color: greenyellow;
-}
-
-.card_agua {
-    top: 1em;
-    margin-left: 0.8rem;
-    z-index: 9999;
-}
-
-.lixeira {
-    position: relative;
-    top: 40px;
-    right: 10px;
-    cursor: pointer;
-}
-
-.glass {
-    color: #fff;
-    position: relative;
-    left: 0.1rem;
-    top: 0.5rem;
-}
-
-.cardNotas {
-    color: #fff;;
-}
-
-#result {
     top: 0.1em;
     font-size: 1.5em;
     font-weight: bold;
 }
 
-#result {
-    margin-left: 1em;;
+.card_agua {
+    top: 0.5em;
+    margin-left: 0.1rem;
+    z-index: 9999;
+}
+
+.lixeira {
+    position: relative;
+    left: 10px;
+    cursor: pointer;
+}
+
+.cardNotas {
+    color: #fff;;
 }
 
 .tabela_conteudo {
@@ -146,11 +164,11 @@ body {
     width: 26rem;
     position: relative;
     font-weight: bold;
-    left: 1rem;
+    right: 1rem;
 }
 
 .cardSemana {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     color: #fff;
 }
 
@@ -177,7 +195,7 @@ body {
 .cardData {
     border-radius: 10px;
     position: relative;
-    left: 6.5rem;
+    left: 5.2rem;
     width: 40%;
     text-align: center;
     font-size: 20px;
@@ -189,7 +207,7 @@ body {
     border: 1px solid #fff;
     margin-bottom: 1em;
     position: relative;
-    left: 7rem;
+    left: 5rem;
     width: 50%;;
     border-radius: 10px;
     text-align: center;
@@ -210,7 +228,7 @@ body {
 
 #btn-adicionar {
     position: relative;
-    left: 11.5rem;
+    left: 7.8rem;
     margin-bottom: 1rem;
 }
 
@@ -225,21 +243,15 @@ body {
    
 }
 
-.tarefas {
-    width: 55%;
-    text-align: center;
-    height: 100%;
-    margin: 0 auto;
-    padding: 1em;
-    background: #333;
-    color: #fff;
-    font-weight: bold;
-}
-
 .table {
     color: #444; 
     font-weight: bold;
     background: #fff;
+    font-size: 0.8rem;
+}
+
+.editar_tarefa {
+    cursor: pointer;
 }
 
 .mensagem_sucesso {

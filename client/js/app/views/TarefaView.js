@@ -21,16 +21,17 @@ class TarefaView {
             </thead>
             <tbody>
                 ${model.tarefas.map(tarefa => `
-                <tr>
-                    <td>${tarefa.data.getDate()}/
+                <tr class="tabelaTarefas" data-id="${tarefa.id}">
+                    <td><a class="editar_tarefa" >${tarefa.data.getDate()}/
                     ${tarefa.data.getMonth()+1}/
                     ${tarefa.data.getFullYear()} - 
-                    ${tarefa.semana}</td>
-                    <td>${tarefa.estudos} - ${tarefa.statusEstudos}</td>
-                    <td>${tarefa.projetos} - ${tarefa.statusProjetos}</td>
-                    <td>${tarefa.pessoal} - ${tarefa.statusPessoal}</td>
-                    <td>${tarefa.agua}<i onclick="registroDiarioController.deletaRegistro()" 
-                    class="lixeira fas fa-trash-alt"></></td>
+                    ${tarefa.semana}</a></td>
+                    <td><a class="editar_tarefa" >${tarefa.estudos} - ${tarefa.statusEstudos}</td></a>
+                    <td><a class="editar_tarefa" >${tarefa.projetos} - ${tarefa.statusProjetos}</a></td>
+                    <td><a class="editar_tarefa" >${tarefa.pessoal} - ${tarefa.statusPessoal}</a></td>
+                    <td><a class="editar_tarefa" >${tarefa.agua}</a>
+                        <i onclick="tarefaController.deletaRegistro(event)" class="lixeira fas fa-trash-alt">
+                    </td>
                 </tr>
                 `).join('')}
             </tbody>
@@ -40,7 +41,7 @@ class TarefaView {
             </tfoot>
         </table>
         <script>
-                let registroDiarioController = new RegistroDiarioController();
+                let tarefaController = new TarefaController();
         </script>
         `;
     }

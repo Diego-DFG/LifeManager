@@ -190,6 +190,7 @@ class RegistroDiarioController {
 				.obterRegistrosDiaVinteCinco(dia)
 				.then(listAll(dia))
 				.catch(catchError);
+				return;
 		} else 
 		if(dia == 26) {
 			registros
@@ -226,6 +227,9 @@ class RegistroDiarioController {
 				.obterRegistrosDiaTrinta_e_um(dia)
 				.then(listAll(dia))
 				.catch(catchError);
+		} else {
+			this._mensagem.texto = 'Não há registros para a data informada!';
+			this._mensagemViewError.update(this._mensagem);
 		}
 	}
 

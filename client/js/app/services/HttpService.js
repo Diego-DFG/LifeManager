@@ -13,7 +13,10 @@ class HttpService {
 
 		return fetch(url)
 				.then(res => this._handlerErrors(res))
-				.then(res => res.json());
+				.then(res => {
+					console.log(res);
+					return res.json();
+				});
 	}
 
 	 post(url, dado) {
@@ -26,4 +29,16 @@ class HttpService {
 	 		.then(res => this._handlerErrors(res));
 
         }
+
+	delete(url, id) {
+			console.log(id);
+			return fetch(url, {
+				headers: {'Content-type' : 'application/json'},
+				method: 'delete',
+				body: JSON.stringify(id)
+			})
+			.then(res => this._handlerErrors(res));
+
+	   }
+		
 }

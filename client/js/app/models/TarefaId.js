@@ -1,6 +1,7 @@
-class Tarefa {
-    constructor(data, semana, estudos, projetos, pessoal, statusEstudos,statusProjetos, statusPessoal, agua, id) 
-    {
+class TarefaId  extends Tarefa {
+    constructor(id, data, semana, estudos, projetos, pessoal, statusEstudos,statusProjetos, statusPessoal, agua) {
+        super();
+        this._id = id;
         this._data = new Date(data.getTime());
         this._semana = semana;
         this._estudos = estudos;
@@ -10,7 +11,6 @@ class Tarefa {
         this._statusProjetos = statusProjetos;
         this._statusPessoal = statusPessoal;
         this._agua = agua;
-        this._id = id;
         Object.freeze(this);
     }
 
@@ -53,6 +53,4 @@ class Tarefa {
     get agua() {
         return this._agua;
     }
-
 }
-

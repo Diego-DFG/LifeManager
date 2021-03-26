@@ -15,6 +15,17 @@ class RegistrosService {
 				});
 	}
 
+	excluiRegistros(id) {
+
+		return this._http
+				.delete(`/registros/${id}`)
+				.then(() => console.log('Registro adicionado com sucesso!'))
+				.catch(erro => {
+					console.log(erro);
+					throw new Error('Não foi possível adicionar o registro!');
+				});
+	}
+
 	obterRegistrosJan() {
 
 		return this._http
@@ -61,13 +72,14 @@ class RegistrosService {
 
 		return this._http
 				.get('/registros')
-				.then(registros => 
-         			registros.map(objeto => 
+				.then(registros => {
+					console.log(registros);
+         			return registros.map(objeto => 
          				new Tarefa(
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id))})
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 2);

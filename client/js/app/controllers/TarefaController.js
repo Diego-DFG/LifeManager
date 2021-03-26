@@ -46,8 +46,6 @@ class TarefaController {
              });
 		
 			this._tarefas.adiciona(this._criaRegistro());
-
-		this._tarefaView.update(this._tarefas);
 		
 		this._mensagem.texto = 'Tarefa adicionada com sucesso!';
 
@@ -56,6 +54,39 @@ class TarefaController {
 		this._limpaFormulario();
 
     }
+
+	deletaRegistro(event) {
+
+		event.preventDefault();
+
+		let botaoDeletar = event.target;
+
+		if(botaoDeletar) {
+			if(confirm("Tem certeza que deseja excluir esta tarefa?")) {
+				const linhaTarefa = event.target.closest('[data-id]');
+				let id = linhaTarefa.dataset.id;
+
+				let registros = new RegistrosService();
+
+				registros
+					.excluiRegistros(id)
+					.then(()=> 
+						linhaTarefa.remove())
+					.then(mensagem => {
+						console.log(mensagem);
+						this._mensagem.texto = 'Tarefa deletada do banco com sucesso!';
+						this._mensagemViewSuccess.update(this._mensagem);
+					})
+					.catch(erro => {
+						console.log(erro);
+						this._mensagem.texto = 'Não foi possível deletar a tarefa!';
+						this._mensagemViewError.update(this._mensagem);
+					});
+
+					this._limpaFormulario();	
+			}
+		}
+	}
 
     importaRegistrosJaneiro() {
 
@@ -360,7 +391,7 @@ class TarefaController {
 	_criaRegistro() {
 
 		return new Tarefa(
-            new Date(this._inputData.value),
+            DateHelper._textoParaData(this._inputData.value),
             this._inputSemana.textContent,
             this._inputEstudos.value,
             this._inputProjetos.value,
