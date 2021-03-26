@@ -456,7 +456,7 @@ class RegistrosDiarioService {
 									objeto._statusPessoal, objeto._agua)))
 				.then(registros => {
 	                return registros.filter(registro => 
-	                   		 registro._data.getMonth() == 2);
+	                   		 registro._data.getMonth() == dia);
 				})
 	            .catch(erro => {
 	                console.log(erro);

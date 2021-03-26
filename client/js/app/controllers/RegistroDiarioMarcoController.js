@@ -1,4 +1,4 @@
-class RegistroDiarioController {
+class RegistroDiarioMarcoController {
     constructor() {
         let $ = document.querySelector.bind(document);
 
