@@ -13,7 +13,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -34,7 +34,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -55,7 +55,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -76,7 +76,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -97,7 +97,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -118,7 +118,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -139,7 +139,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -160,7 +160,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -181,7 +181,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -202,7 +202,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -223,7 +223,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -244,7 +244,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -265,7 +265,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -286,7 +286,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -306,7 +306,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -327,7 +327,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -348,7 +348,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -369,7 +369,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -390,7 +390,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -411,7 +411,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -432,7 +432,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -453,7 +453,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == dia);
@@ -537,7 +537,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -558,7 +558,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -579,7 +579,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -600,7 +600,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -621,7 +621,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);
@@ -642,7 +642,7 @@ class RegistrosDiarioService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getUTCDate() == dia);

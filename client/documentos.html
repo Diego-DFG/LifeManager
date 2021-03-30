@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <!-- Estilos css -->
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/documento.css">
         <!-- Font Awesome -->
         <script src="./js/fontawesome-all.js"></script>
     </head>
@@ -33,75 +33,57 @@
                 </ul>
             </nav>
             <div class="conteudo">
-                <div id="periodo" class="periodo container">
-                    <h1>PERÍODO</h1>
-                    <div class="periodo_meses">
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosJaneiro()">Janeiro</a></td>
-                            <input type="number" id="periodo_dia_janeiro" class="periodo_dia"/>
-                            <button onclick="registroDiarioJaneiroController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
+                <div id="conteudo__periodo" class="periodo container">
+                    <h1>CATEGORIA</h1>
+                    <div class="conteudo_meses">
+                        <tr class="conteudo__container">
+                            <td><a href="#" onclick="tarefaController.importaRegistrosJaneiro()">Identificação</a></td>
+                            <input type="text" id="periodo_dia_janeiro" class="conteudo__dia form-control"/>
+                            <button onclick="registroDiarioJaneiroController.importaRegistros()" class="btn-inserirDia" type="button">
+                                <i class="pesquisa fas fa-search"></i>
+                            </button>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosFevereiro()">Fevereiro</a></td>
-                            <input type="number" id="periodo_dia_fevereiro" class="periodo_dia"/>
-                            <button onclick="registroDiarioFevereiroController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosFevereiro()">Laborais</a></td>
+                            <input type="text" id="periodo_dia_fevereiro" class="conteudo__dia form-control"/>
+                            <button onclick="registroDiarioFevereiroController.importaRegistros()" class="btn-inserirDia" type="button">
+                                <i class="pesquisa fas fa-search"></i>
+                            </button>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosMarco()">Março</a></td>
-                            <input type="number" id="periodo_dia_marco"  class="periodo_dia"/>
-                            <button onclick="registroDiarioMarcoController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosMarco()">Contratuais</a></td>
+                            <input type="text" id="periodo_dia_marco"  class="conteudo__dia form-control"/>
+                            <button onclick="registroDiarioMarcoController.importaRegistros()" class="btn-inserirDia" type="button">
+                                <i class="pesquisa fas fa-search"></i>
+                            </button>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Abril</a></td>
-                            <input type="number" id="periodo_dia_abril" class="periodo_dia" />
-                            <button onclick="registroDiarioAbrilController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Financeiros</a></td>
+                            <input type="text" id="periodo_dia_abril" class="conteudo__dia form-control" />
+                            <button onclick="registroDiarioAbrilController.importaRegistros()" class="btn-inserirDia" type="button">
+                                <i class="pesquisa fas fa-search"></i>
+                            </button>
                         </tr>
                         <tr>
                             <td >
-                                <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Maio</a></td>
-                                <input type="number" id="periodo_dia_maio" class="periodo_dia" />
-                                <button onclick="registroDiarioMaioController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
+                                <td><a href="#" onclick="tarefaController.importaRegistrosAbril()">Entidades Governamentais</a></td>
+                                <input type="text" id="periodo_dia_maio" class="conteudo__dia form-control" />
+                                <button onclick="registroDiarioMaioController.importaRegistros()" class="btn-inserirDia" type="button">
+                                    <i class="pesquisa fas fa-search"></i>
+                                </button>
                             </td>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosJunho()">Junho</a></td>
-                            <input type="number" id="periodo_dia_junho" class="periodo_dia" />
-                            <button onclick="registroDiarioJunhoController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
-                        </tr>
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosJulho()">Julho</a></td>
-                            <input type="number" id="periodo_dia_julho" class="periodo_dia" />
-                            <button onclick="registroDiarioJulhoController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
-                        </tr>
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosAgosto()">Agosto</a></td>
-                            <input type="number" id="periodo_dia_agosto" class="periodo_dia" />
-                            <button onclick="registroDiarioAgostoController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
-                        </tr>
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosSetembro()">Setembro</a></td>
-                            <input type="number" id="periodo_dia_setembro" class="periodo_dia" />
-                            <button onclick="registroDiarioSetembroController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
-                        </tr>
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosOutubro()">Outubro</a></td>
-                            <input type="number" id="periodo_dia_outubro" class="periodo_dia" />
-                            <button onclick="registroDiarioOutubroController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
-                        </tr>
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosNovembro()">Novembro</a></td>
-                            <input type="number" id="periodo_dia_novembro" class="periodo_dia" />
-                            <button onclick="registroDiarioNovrmbroController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
-                        </tr>
-                        <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosDezembro()">Dezembro</a></td>
-                            <input type="number" id="periodo_dia_dezembro" class="periodo_dia" />
-                            <button onclick="registroDiarioDezembroController.importaRegistros()" class="btn-inserirDia" type="button">Inserir</button>
+                            <td><a href="#" onclick="tarefaController.importaRegistrosJunho()">Legislação</a></td>
+                            <input type="text" id="periodo_dia_junho" class="conteudo__dia form-control" />
+                            <button onclick="registroDiarioJunhoController.importaRegistros()" class="btn-inserirDia" type="button">
+                                <i class="pesquisa fas fa-search"></i>
+                            </button>
                         </tr>
                     </div>
                 </div>
                 <div id="tarefas" class="tarefas container">
-                    <h1>TAREFAS</h1>
+                    <h1>DOCUMENTOS</h1>
                     <div id="mensagemView"></div>
                     <form>
                         <div id="tarefaView"></div>
@@ -112,26 +94,8 @@
                 </div>
                 <div id="tabela_periodos" class="tabela_periodos container">
                     <form>
-                        <div class="container_card_agua">
-                            <h4>Água</h4>
-                            <input type="checkbox" id="cardAgua" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <input type="checkbox" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <input type="checkbox" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <input type="checkbox" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <input type="checkbox" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <input type="checkbox" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <input type="checkbox" class="card_agua" value="1" />
-                            <i class="glass fas fa-glass-whiskey fa-1x"></i>
-                            <span  id="result">0</span>
-                        </div>
                         <div class="tabela_conteudo">
-                            <h1>NOTAS</h1>
+                            <h1>CADASTRO</h1>
                             <div class="semana">
                                 <div class="subCardSemana">
                                     <div class="cardSemana">
@@ -165,40 +129,46 @@
                                 </div>
                                 <label id="label_semana"></label>
                                 <div class="cardData">
+                                    <h4>DATA</h4>
                                     <input type="date" id="data" class="form-control">
                                 </div>
                             </div>
-                            <div onclick="capturaInputEstudos()" id="card_estudos" class="card_estudos">
-                                <h4>ESTUDOS</h4>
+                            <div onclick="capturaInputEstudos()" id="card_estudos" class="card__cadastro">
+                                <h4>DOCUMENTO</h4>
                                 <div id="cardNotas" class="card_01 cardNotas">
-                                    <input  type="checkbox" class="input__card_estudos" />
                                     <input type="text" id="input__Text_estudos" class="form-control input"
                                      placeholder="Insira a disciplina"/>
                                     <div id="checkEstudos" class="checkViewEstudos"></div>
                                 </div>
                             </div>
-                            <div onclick="capturaInputProjetos()" id="card_projetos" class="card_estudos">
-                                <h4>PROJETOS</h4>
+                            <div onclick="capturaInputProjetos()" id="card_projetos" class="card__cadastro">
+                                <h4>CATEGORIA</h4>
                                 <div class="cardNotas">
-                                    <input type="checkbox" class="input__card_projetos" />
                                     <input type="text" id="input__Text_projetos" class="form-control input" 
                                     placeholder="Insira o projeto"/>
                                     <div id="checkProjetos" class="checkViewProjetos"></div>
                                 </div>
                             </div>
-                            <div onclick="capturaInputPessoal()" id="card_pessoal" class="card_estudos input">
-                                <h4>PESSOAL</h4>
+                            <div onclick="capturaInputPessoal()" id="card_pessoal" class="card__cadastro">
+                                <h4>OBSERVAÇÕES</h4>
                                 <div class="cardNotas">
-                                    <input type="checkbox" class="input__card_pessoal" />
                                     <textarea id="input__Text_pessoal" class="form-control input" 
                                     placeholder="Insira suas outras atividades"></textarea>
                                     <div id="checkPessoal" class="checkViewPessoal"></div>
                                 </div>
                             </div>
+                            <form id="formulario" method="post" enctype="multipart/form-data">
+                                <div onclick="capturaInputPessoal()" id="card_arquivo" class="arquivo">
+                                    <h4>ARQUIVO</h4>
+                                    <div class="cardNotas">
+                                        <input type="text" name="campo1" value="hello" class="form-control input" />
+                                        <input type="text" name="campo2" value="world" class="form-control input" />
+                                        <input class="btn-selecionarArquivo" name="arquivo" type="file" />
+                                        <button class="btn btn-secondary">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <button onclick="tarefaController.adiciona(event)" class="btn btn-success" id="btn-adicionar" type="submit">
-                            Incluir
-                        </button>
                     </form>
                 </div>
             </div>

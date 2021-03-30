@@ -95,7 +95,7 @@ class TarefaController {
 		let registros = new RegistrosService();
 
 		registros
-			.obterRegistrosJan(dia)
+			.obterRegistrosJan()
 			.then(registros => {
 				console.log(registros);
 	            registros
@@ -149,6 +149,7 @@ class TarefaController {
 				console.log(registros);
 	            registros
 	                .forEach(registro => {
+						console.log(registro);
 						this._tarefas.adiciona(registro);
 						this._mensagem.texto = 'Tarefas importadas com sucesso!';
 			 			this._mensagemViewSuccess.update(this._mensagem);

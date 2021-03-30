@@ -19,7 +19,7 @@ class RegistrosService {
 
 		return this._http
 				.delete(`/registros/${id}`)
-				.then(() => console.log('Registro adicionado com sucesso!'))
+				.then(() => console.log('Registro apagado com sucesso!'))
 				.catch(erro => {
 					console.log(erro);
 					throw new Error('Não foi possível adicionar o registro!');

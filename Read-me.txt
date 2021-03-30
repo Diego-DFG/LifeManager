@@ -1,0 +1,17 @@
+Projeto Gerenciador - versão 1.0
+
+Descrição: Sistema projetado para controle das tarefas do dia-a-dia, 
+proporcionando ao usuário um melhor gerenciamento
+dos gastos das atividades de rotina e de documentos.
+
+Versão 1.0: A versão 1.0 possui persistência dos dados com 
+banco mySQL, utilizando o aplicativo Xampp e uma infraestrutura
+de servidor local com NODEJS (recomendável versões pares à partir da 8.0 LTS).
+Possui também as funcionalidades de resgate dos dados através de chamadas AJAX
+ao servidor local e banco, e apresentação dos dados em mecanismos de view,
+valendo-se da arquitetura MVC e do paradigma Orientado à Objeto para realização
+das comunicações entre os diferentes módulos representantes dos modelos, das views,
+e dos controllers.
+
+Obs: Em andamento a versão 1.1, que possuirá a funcionalidade de edição dos dados
+e outras "features" para melhora da experiência do usuário.

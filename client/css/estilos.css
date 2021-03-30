@@ -14,16 +14,35 @@ body {
     color: green;
 }
 
-.textoVermelho {
+/* .textoVermelho {
     color: red;
-}
+} */
 
 /*Navegação*/
 
 .navegacao {
-    height: 5%;
+    height: 50px;
     border-bottom: 1px solid #555;
     background: #333;
+    display: flex;
+}
+
+.navegacao__lista {
+    display: flex;
+    width: 100%;
+    margin-left: 18rem;
+    line-height: 50px;
+}
+
+.navegacao__link {
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.navegacao__ancora {
+    color: #fff;
 }
 
 .conteudo {
@@ -112,6 +131,8 @@ body {
 
 .container_card_agua {
     display: flex;
+    position: relative;
+    top: 15px;
     margin: 0.5em;
 }
 
@@ -120,6 +141,13 @@ body {
     font-weight: bold;
     position: relative;
     right: 10px;
+}
+
+.glass {
+    color: #fff;
+    position: relative;
+    bottom: 20px;
+    right: 1.222rem;
 }
 
 .card_agua, #result {
@@ -250,10 +278,6 @@ body {
     font-size: 0.8rem;
 }
 
-.editar_tarefa {
-    cursor: pointer;
-}
-
 .mensagem_sucesso {
     background: green;
     border-radius: 10px;
@@ -265,3 +289,9 @@ body {
     position: relative;
     top: 35%;
 }
+
+/* .editar_tarefa_data {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+} */

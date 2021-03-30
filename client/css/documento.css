@@ -1,0 +1,290 @@
+.wrapper {padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
+    list-style: none; font-family: 'Open Sans', sans-serif; }
+
+body {
+height: 800px;
+box-sizing: border-box;
+}
+
+/* Estilos gerais */
+
+/*cores*/
+
+.textoVerde {
+color: green;
+}
+
+/* .textoVermelho {
+color: red;
+} */
+
+/*Navegação*/
+
+.navegacao {
+height: 50px;
+border-bottom: 1px solid #555;
+background: #333;
+display: flex;
+}
+
+.navegacao__lista {
+display: flex;
+width: 100%;
+margin-left: 18rem;
+line-height: 50px;
+}
+
+.navegacao__link {
+text-transform: uppercase;
+cursor: pointer;
+list-style: none;
+margin-right: 2rem;
+}
+
+.navegacao__ancora {
+color: #fff;
+}
+
+.conteudo {
+height: 95%;
+width: 100%;
+display: flex;
+background: #333;
+}
+
+#conteudo__periodo {
+width: 20%;
+background: #444;
+color: #fff;
+border-right: 1px solid #555;
+}
+
+.conteudo_meses {
+border: 1px solid #fff;
+border-radius: 10px;
+position: relative;
+padding-top: 1rem;
+padding-bottom: 1rem;
+left: 30px;
+width: 80%;
+}
+
+.conteudo__dia {
+    display: block;
+    width: 80%;
+    margin-left: 1rem;
+}
+
+.conteudo .btn-inserirDia {
+    margin-left: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+#tarefas {
+width: 60%;
+text-align: center;
+height: 100%;
+margin: 0 auto;
+padding: 1em;
+background: #333;
+color: #fff;
+font-weight: bold;
+}
+
+#tabela_periodos { 
+background: #444;
+border-left: 1px solid #555;
+width: 25%;
+}
+
+/* Navegação */
+
+.logo span {
+position: relative;
+font-size: 1.5em;
+font-weight: bold;
+padding: 2em;
+color: #fff;
+font-family: 'Lobster', cursive;
+}
+
+/******* Período **************/
+
+.periodo_dia {
+width: 50px; 
+position: relative; 
+left: 25px;
+}
+
+.btn-inserirDia {
+width: 50px; 
+position: relative; 
+left: 25px;
+}
+
+.periodo a {
+position: relative;
+line-height: 2em;
+color: #fff;
+display: block;
+text-align: center;
+}
+
+.periodo h1, .tabela_periodos h1 {
+text-align: center;
+padding-top: 0.5em;
+font-weight: bold;
+}
+
+/******* Tabela Periodos **************/
+
+
+.lixeira {
+position: relative;
+left: 10px;
+cursor: pointer;
+}
+
+.cardNotas {
+color: #fff;;
+}
+
+.tabela_conteudo {
+position: relative;
+bottom: 1em;
+}
+
+.tabela_conteudo h1, .tabela_conteudo h4 {
+color: #fff;
+font-weight: bold;
+}
+
+.semana {
+padding: 0.5em;
+margin-bottom: 1em;;
+border-radius: 10px;
+width: 26rem;
+position: relative;
+font-weight: bold;
+right: 1rem;
+}
+
+.card_arquivo {
+    position: relative;
+    right: 1rem;
+}
+
+.cardSemana {
+margin-left: 1rem;
+color: #fff;
+}
+
+.cardSemana input:checked {
+background: #fff;
+}
+
+.subCardSemana {
+display: flex;
+}
+
+#label_semana {
+position: relative;
+left: 10rem;
+top: 1rem;
+text-transform: uppercase;
+color: #fff;
+}
+
+#checkViewStatus {
+color: red;
+}
+
+.cardData {
+border-radius: 10px;
+position: relative;
+left: 5.2rem;
+width: 40%;
+text-align: center;
+font-size: 20px;
+padding: 1rem 0;
+margin: 1rem 0;;
+}
+
+.card__cadastro {
+border: 1px solid #fff;
+margin-bottom: 1em;
+position: relative;
+left: 3rem;
+width: 70%;;
+border-radius: 10px;
+text-align: center;
+padding: 1em 0;
+}
+
+.arquivo {
+border: 1px solid #fff;
+margin-bottom: 1em;
+position: relative;
+width: 98%;;
+border-radius: 10px;
+text-align: center;
+padding: 1em 0;
+font-size: 12px;
+}
+
+.btn-selecionarArquivo {
+    display: flex;
+}
+
+.card_estudos h4, .cardNotas {
+position: relative;
+text-align: left;
+left: 1.5rem;
+width: 80%;
+}
+.subCard {
+padding-left: 2em;
+font-size: 0.7em;;
+}
+
+#btn-adicionar {
+position: relative;
+left: 7.8rem;
+margin-bottom: 1rem;
+}
+
+/******* Tarefas **************/
+
+.tarefas h1, .periodo h1 {
+padding-bottom: 1em;
+}
+
+.tabela_periodos {
+width: 35%;
+
+}
+
+.table {
+color: #444; 
+font-weight: bold;
+background: #fff;
+font-size: 0.8rem;
+}
+
+.mensagem_sucesso {
+background: green;
+border-radius: 10px;
+height: 70px;
+margin-bottom: 1rem;
+}
+
+.mensagem_sucesso p {
+position: relative;
+top: 35%;
+}
+
+/* .editar_tarefa_data {
+color: #333;
+font-size: 0.9rem;
+font-weight: bold;
+} */
