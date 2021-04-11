@@ -24,6 +24,39 @@ class RegistrosService {
 					console.log(erro);
 					throw new Error('Não foi possível adicionar o registro!');
 				});
+
+	}
+
+	editaRegistros(id) {
+
+		return this._http
+				.getById(`/registros/${id}`)
+				.then(dados => {
+					console.log(dados);
+					console.log('Registro atualizado com sucesso!');
+					return dados.json();
+				})
+				.catch(erro => {
+					console.log(erro);
+					throw new Error('Não foi possível atualizar o registro!');
+				});
+	}
+
+	atualizaRegistros(id, data, semana, estudos, projetos, pessoal, statusEstudos,
+		statusProjetos, statusPessoal, agua) {
+
+		return this._http
+				.getById(`/registros/${id}`, data, semana, estudos, projetos, pessoal, statusEstudos, 
+							statusProjetos, statusPessoal, agua)
+				.then(dados => {
+					console.log(dados);
+					console.log('Registro atualizado com sucesso!');
+					return dados.json();
+				})
+				.catch(erro => {
+					console.log(erro);
+					throw new Error('Não foi possível atualizar o registro!');
+				});
 	}
 
 	obterRegistrosJan() {
@@ -36,7 +69,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 0);
@@ -57,7 +90,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 1);
@@ -100,7 +133,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 3);
@@ -121,7 +154,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 4);
@@ -142,7 +175,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 5);
@@ -163,7 +196,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 6);
@@ -184,7 +217,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 7);
@@ -205,7 +238,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 8);
@@ -226,7 +259,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 9);
@@ -247,7 +280,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 10);
@@ -268,7 +301,7 @@ class RegistrosService {
 							new Date(objeto._data), 
 							objeto._semana, objeto._estudos, objeto._projetos, objeto._pessoal, 
 								objeto._statusEstudos, objeto._statusProjetos, 
-									objeto._statusPessoal, objeto._agua)))
+									objeto._statusPessoal, objeto._agua, objeto.id)))
 				.then(registros => {
 	                return registros.filter(registro => 
 	                   		 registro._data.getMonth() == 11);

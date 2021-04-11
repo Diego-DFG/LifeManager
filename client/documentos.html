@@ -93,7 +93,7 @@
                     </form>
                 </div>
                 <div id="tabela_periodos" class="tabela_periodos container">
-                    <form>
+                    <form onsubmit="documentoController.adiciona(event)">
                         <div class="tabela_conteudo">
                             <h1>CADASTRO</h1>
                             <div class="semana">
@@ -133,37 +133,35 @@
                                     <input type="date" id="data" class="form-control">
                                 </div>
                             </div>
-                            <div onclick="capturaInputEstudos()" id="card_estudos" class="card__cadastro">
+                            <div id="card_estudos" class="card__cadastro">
                                 <h4>DOCUMENTO</h4>
                                 <div id="cardNotas" class="card_01 cardNotas">
-                                    <input type="text" id="input__Text_estudos" class="form-control input"
+                                    <input type="text" id="input__text_documento" class="form-control input"
                                      placeholder="Insira a disciplina"/>
                                     <div id="checkEstudos" class="checkViewEstudos"></div>
                                 </div>
                             </div>
-                            <div onclick="capturaInputProjetos()" id="card_projetos" class="card__cadastro">
+                            <div id="card_projetos" class="card__cadastro">
                                 <h4>CATEGORIA</h4>
                                 <div class="cardNotas">
-                                    <input type="text" id="input__Text_projetos" class="form-control input" 
+                                    <input type="text" id="input__text_categoria" class="form-control input" 
                                     placeholder="Insira o projeto"/>
                                     <div id="checkProjetos" class="checkViewProjetos"></div>
                                 </div>
                             </div>
-                            <div onclick="capturaInputPessoal()" id="card_pessoal" class="card__cadastro">
+                            <div id="card_pessoal" class="card__cadastro">
                                 <h4>OBSERVAÇÕES</h4>
                                 <div class="cardNotas">
-                                    <textarea id="input__Text_pessoal" class="form-control input" 
+                                    <textarea id="input__text_observacoes" class="form-control input" 
                                     placeholder="Insira suas outras atividades"></textarea>
                                     <div id="checkPessoal" class="checkViewPessoal"></div>
                                 </div>
                             </div>
                             <form id="formulario" method="post" enctype="multipart/form-data">
-                                <div onclick="capturaInputPessoal()" id="card_arquivo" class="arquivo">
+                                <div id="card_arquivo" class="arquivo">
                                     <h4>ARQUIVO</h4>
                                     <div class="cardNotas">
-                                        <input type="text" name="campo1" value="hello" class="form-control input" />
-                                        <input type="text" name="campo2" value="world" class="form-control input" />
-                                        <input class="btn-selecionarArquivo" name="arquivo" type="file" />
+                                        <input id="input__arquivo" class="btn-selecionarArquivo" name="arquivo" type="file" />
                                         <button class="btn btn-secondary">Enviar</button>
                                     </div>
                                 </div>
@@ -181,48 +179,16 @@
         </script>
 
         <!-- JS scripts -->
-        <script src='./js/app/models/Tarefa.js'></script>
+        <script src='./js/app/models/Documento.js'></script>
         <script src='./js/app/helpers/DateHelper.js'></script>
         <script src='./js/app/helpers/checkbox-helper.js'></script>
         <script src='./js/app/helpers/cor-status-helper.js'></script>
         <script src='./js/app/helpers/limpaTarefas-helper.js'></script>
-        <script src='./js/app/helpers/capturaValorInput-helper.js'></script>
-        <script src='./js/app/models/ArrayTarefas.js'></script>
-        <script src='./js/app/controllers/TarefaController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioJaneiroController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioFevereiroController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioMarcoController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioAbrilController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioMaioController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioJunhoController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioJulhoController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioAgostoController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioSetembroController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioOutubroController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioNovembroController.js'></script>
-        <script src='./js/app/controllers/RegistroDiarioDezembroController.js'></script>
-        <script src='./js/app/views/TarefaView.js'></script>
-        <script src='./js/app/models/Mensagem.js'></script>
-        <script src='./js/app/views/MensagemViewSucess.js'></script>
-        <script src='./js/app/views/MensagemViewError.js'></script>
-        <script src='./js/app/services/HttpService.js'></script>
-        <script src='./js/app/services/RegistrosService.js'></script>
-        <script src='./js/app/services/RegistrosDiarioService.js'></script>
+        <script src='./js/app/controllers/DocumentoController.js'></script>
+        
         <script>
 
-            let tarefaController = new TarefaController();
-            let registroDiarioJaneiroController = new RegistroDiarioJaneiroController();
-            let registroDiarioFevereiroController = new RegistroDiarioFevereiroController();
-            let registroDiarioMarcoController = new RegistroDiarioMarcoController();
-            let registroDiarioAbrilController = new RegistroDiarioAbrilController();
-            let registroDiarioMaioController = new RegistroDiarioMaioController();
-            let registroDiarioJunhoController = new RegistroDiarioJunhoController();
-            let registroDiarioJulhoController = new RegistroDiarioJulhoController();
-            let registroDiarioAgostoController = new RegistroDiarioAgostoController();
-            let registroDiarioSetembroController = new RegistroDiarioSetembroController();
-            let registroDiarioOutubroController = new RegistroDiarioOutubroController();
-            let registroDiarioNovembroController = new RegistroDiarioNovembroController();
-            let registroDiarioDezembroController = new RegistroDiarioDezembroController();
+            let documentoController = new DocumentoController();
 
         </script>
     </body>

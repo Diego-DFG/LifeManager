@@ -1,29 +1,43 @@
-.wrapper {padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
-    list-style: none; font-family: 'Open Sans', sans-serif; }
+/* Estilos gerais */
 
-body {
-height: 800px;
-box-sizing: border-box;
+:root {
+
+    /* Coes */
+    --verde: green;
+    --branco: #fff;
+    --preto: #333;
+    --pretoLeve: #444;
+    --cinza: #555;
+    --vermelho: #e50914;
+
+    /*Fonts */
+    --wrapper: 'Open Sans', sans-serif;
+    --navegacao: 'Lobster', cursive;
 }
 
-/* Estilos gerais */
+.wrapper {
+    padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
+    list-style: none; font-family: var(--wrapper); }
+
+body {
+    height: 800px;
+    box-sizing: border-box;
+}
+
+
 
 /*cores*/
 
 .textoVerde {
-color: green;
+    color: var(--verde);
 }
-
-/* .textoVermelho {
-color: red;
-} */
 
 /*Navegação*/
 
 .navegacao {
 height: 50px;
-border-bottom: 1px solid #555;
-background: #333;
+border-bottom: 1px solid var(--cinza);
+background: var(--preto);
 display: flex;
 }
 
@@ -42,25 +56,25 @@ margin-right: 2rem;
 }
 
 .navegacao__ancora {
-color: #fff;
+color: var(--branco);
 }
 
 .conteudo {
 height: 95%;
 width: 100%;
 display: flex;
-background: #333;
+background: var(--preto);
 }
 
 #conteudo__periodo {
 width: 20%;
-background: #444;
-color: #fff;
-border-right: 1px solid #555;
+background: var(--pretoLeve);
+color: var(--branco);
+border-right: 1px solid var(--cinza);
 }
 
 .conteudo_meses {
-border: 1px solid #fff;
+border: 1px solid var(--branco);
 border-radius: 10px;
 position: relative;
 padding-top: 1rem;
@@ -86,14 +100,14 @@ text-align: center;
 height: 100%;
 margin: 0 auto;
 padding: 1em;
-background: #333;
-color: #fff;
+background: var(--preto);
+color: var(--branco);
 font-weight: bold;
 }
 
 #tabela_periodos { 
-background: #444;
-border-left: 1px solid #555;
+background: var(--pretoLeve);
+border-left: 1px solid var(--cinza);
 width: 25%;
 }
 
@@ -104,8 +118,8 @@ position: relative;
 font-size: 1.5em;
 font-weight: bold;
 padding: 2em;
-color: #fff;
-font-family: 'Lobster', cursive;
+color: var(--branco);
+font-family: var(--navegacao);
 }
 
 /******* Período **************/
@@ -125,7 +139,7 @@ left: 25px;
 .periodo a {
 position: relative;
 line-height: 2em;
-color: #fff;
+color: var(--branco);
 display: block;
 text-align: center;
 }
@@ -146,7 +160,7 @@ cursor: pointer;
 }
 
 .cardNotas {
-color: #fff;;
+color: var(--branco);
 }
 
 .tabela_conteudo {
@@ -155,7 +169,7 @@ bottom: 1em;
 }
 
 .tabela_conteudo h1, .tabela_conteudo h4 {
-color: #fff;
+color: var(--branco);
 font-weight: bold;
 }
 
@@ -176,11 +190,11 @@ right: 1rem;
 
 .cardSemana {
 margin-left: 1rem;
-color: #fff;
+color: var(--branco);
 }
 
 .cardSemana input:checked {
-background: #fff;
+background: var(--branco);
 }
 
 .subCardSemana {
@@ -192,11 +206,11 @@ position: relative;
 left: 10rem;
 top: 1rem;
 text-transform: uppercase;
-color: #fff;
+color: var(--branco);
 }
 
 #checkViewStatus {
-color: red;
+color: var(--vermelho);
 }
 
 .cardData {
@@ -211,7 +225,7 @@ margin: 1rem 0;;
 }
 
 .card__cadastro {
-border: 1px solid #fff;
+border: 1px solid var(--branco);
 margin-bottom: 1em;
 position: relative;
 left: 3rem;
@@ -222,7 +236,7 @@ padding: 1em 0;
 }
 
 .arquivo {
-border: 1px solid #fff;
+border: 1px solid var(--branco);
 margin-bottom: 1em;
 position: relative;
 width: 98%;;
@@ -265,14 +279,14 @@ width: 35%;
 }
 
 .table {
-color: #444; 
+color: var(--pretoLeve); 
 font-weight: bold;
-background: #fff;
+background: var(--branco);
 font-size: 0.8rem;
 }
 
 .mensagem_sucesso {
-background: green;
+background: var(--verde);
 border-radius: 10px;
 height: 70px;
 margin-bottom: 1rem;
@@ -283,8 +297,3 @@ position: relative;
 top: 35%;
 }
 
-/* .editar_tarefa_data {
-color: #333;
-font-size: 0.9rem;
-font-weight: bold;
-} */

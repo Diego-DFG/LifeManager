@@ -40,5 +40,38 @@ class HttpService {
 			.then(res => this._handlerErrors(res));
 
 	   }
+
+	getById(url, id) {
+		console.log(id);
+		return fetch(url, {
+			headers: {'Content-type' : 'application/json'},
+			method: 'get',
+			body: JSON.stringify(id)
+		})
+		.then(res => this._handlerErrors(res));
+	
+	}
+	
+	atualizaItem(id, agua, data, semana, estudos, projetos, pessoal, 
+		statusEstudos, statusProjetos, statusPessoal) {
+			console.log(id);
+			return fetch(url, {
+				headers: {'Content-type' : 'application/json'},
+				method: 'put',
+				body: JSON.stringify({
+					id: id,
+					agua: agua,
+					data: data,
+					semana: semana,
+					estudos: estudos,	
+					projetos: projetos,
+					pessoal: pessoal,
+					statusEstudos: statusEstudos,
+					statusProjetos: statusProjetos,
+					statusPessoal: statusPessoal
+				})
+			})
+			.then(res => this._handlerErrors(res));
+	}
 		
 }

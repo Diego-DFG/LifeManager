@@ -1,21 +1,18 @@
-var statusEstudos = document.querySelectorAll('#editar_tarefa');
-console.log(statusEstudos);
+var statusView = document.querySelectorAll('.editar_status');
 
-    for(var i = 0; i < statusEstudos.length; i++) {
+for(var i = 0; i < statusView.length; i++) {
 
-        var corStatus = statusEstudos[i];
+    var td2 = statusView[i];
 
-        var tdStatus = corStatus.textContent;
+    var tdTeste = td2.textContent;
 
-        if(tdStatus.includes('Concluído')) {
-           corStatus.classList.add('textoVermelho');
-        } else {
-           corStatus.classList.add('textoVerde');
-        }
-
-        console.log(tdStatus);
-
+    if(tdTeste.includes('Concluído')) {
+        td2.classList.toggle('textoVerde');
+        console.log(td2.classList);
+    } else {
+        td2.classList.toggle('.textoVerde');
     }
+}
 
 
 

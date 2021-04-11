@@ -1,29 +1,46 @@
+/* Estilos gerais */
+
+:root {
+    /* Cores */
+    --verde: green;
+    --vermelho: red;
+    --cinza: #555;
+    --preto: #333;
+    --pretoLeve: #444;
+    --branco: #fff;
+
+    /* Fonts */
+    --wrapper: 'Open Sans', sans-serif;
+    --navegacao: 'Lobster', cursive;
+}
+
 .wrapper {padding: 0; margin: 0; box-sizing: border-box; text-decoration: none;
-            list-style: none; font-family: 'Open Sans', sans-serif; }
+            list-style: none; font-family: var(--wrapper); }
 
 body {
     height: 800px;
     box-sizing: border-box;
 }
 
-/* Estilos geraid */
+
 
 /*cores*/
 
 .textoVerde {
-    color: green;
+    color: var(--verde);
 }
 
-/* .textoVermelho {
-    color: red;
-} */
+.textoVermelho {
+    color: var(--vermnelho);
+    font-weight: bold;
+}
 
 /*Navegação*/
 
 .navegacao {
     height: 50px;
-    border-bottom: 1px solid #555;
-    background: #333;
+    border-bottom: 1px solid var(--cinza);
+    background: var(--preto);
     display: flex;
 }
 
@@ -42,21 +59,21 @@ body {
 }
 
 .navegacao__ancora {
-    color: #fff;
+    color: var(--branco);
 }
 
 .conteudo {
     height: 95%;
     width: 100%;
     display: flex;
-    background: #333;
+    background: var(--preto);
 }
 
 #periodo {
     width: 15%;
-    background: #444;
-    color: #fff;
-    border-right: 1px solid #555;
+    background: var(--pretoLeve);
+    color: var(--branco);
+    border-right: 1px solid var(--cinza);
 }
 
 #tarefas {
@@ -65,14 +82,14 @@ body {
     height: 100%;
     margin: 0 auto;
     padding: 1em;
-    background: #333;
-    color: #fff;
+    background: var(--preto);
+    color: var(--branco);
     font-weight: bold;
 }
 
 #tabela_periodos { 
-    background: #444;
-    border-left: 1px solid #555;
+    background: var(--preto);
+    border-left: 1px solid var(--pretoLeve);
     width: 25%;
 }
 
@@ -83,38 +100,43 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     padding: 2em;
-    color: #fff;
-    font-family: 'Lobster', cursive;
+    color: var(--branco);
+    font-family: var(--navegacao);
 }
 
 /******* Período **************/
 
 
 
-.periodo_meses {
-    border: 1px solid #fff;
+.periodo__meses {
+    border: 1px solid var(--branco);
     border-radius: 10px;
     position: relative;
     left: 30px;
     width: 60%;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
 }
 
 .periodo_dia {
     width: 50px; 
     position: relative; 
     left: 25px;
+    border-radius: 5px;
 }
 
-.btn-inserirDia {
+.periodo__meses .btn-inserirDia {
     width: 50px; 
     position: relative; 
     left: 25px;
+    border-radius: 5px;
+    color: var(--pretoLeve);
 }
 
 .periodo a {
     position: relative;
     line-height: 2em;
-    color: #fff;
+    color: var(--branco);
     display: block;
     text-align: center;
 }
@@ -137,25 +159,24 @@ body {
 }
 
 .container_card_agua h4 {
-    color: #fff;
+    color: var(--branco);
     font-weight: bold;
     position: relative;
     right: 10px;
 }
 
 .glass {
-    color: #fff;
+    color: var(--branco);
     position: relative;
     bottom: 20px;
-    right: 1.222rem;
+    right: 1rem;
 }
 
-.card_agua, #result {
+#result {
     position: relative;
-    right: 0.2em;
-    color: greenyellow;
-    top: 0.1em;
-    font-size: 1.5em;
+    left: 0.2em;
+    bottom: 0.6em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -165,6 +186,13 @@ body {
     z-index: 9999;
 }
 
+/****** Tabela ********/
+
+.tarefas__pesquisa {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
 .lixeira {
     position: relative;
     left: 10px;
@@ -172,7 +200,7 @@ body {
 }
 
 .cardNotas {
-    color: #fff;;
+    color: var(--branco);
 }
 
 .tabela_conteudo {
@@ -181,7 +209,7 @@ body {
 }
 
 .tabela_conteudo h1, .tabela_conteudo h4 {
-    color: #fff;
+    color: var(--branco);
     font-weight: bold;
 }
 
@@ -197,11 +225,11 @@ body {
 
 .cardSemana {
     margin-left: 1rem;
-    color: #fff;
+    color: var(--branco);
 }
 
 .cardSemana input:checked {
-    background: #fff;
+    background: var(--branco);
 }
 
 .subCardSemana {
@@ -210,14 +238,14 @@ body {
 
 #label_semana {
     position: relative;
-    left: 10rem;
+    left: 8.5rem;
     top: 1rem;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--branco);
 }
 
 #checkViewStatus {
-    color: red;
+    color: var(--vermelho);
 }
 
 .cardData {
@@ -232,7 +260,7 @@ body {
 }
 
 .card_estudos {
-    border: 1px solid #fff;
+    border: 1px solid var(--branco);
     margin-bottom: 1em;
     position: relative;
     left: 5rem;
@@ -272,14 +300,14 @@ body {
 }
 
 .table {
-    color: #444; 
+    color: var(--pretoLeve); 
     font-weight: bold;
-    background: #fff;
+    background: var(--branco);
     font-size: 0.8rem;
 }
 
 .mensagem_sucesso {
-    background: green;
+    background: var(--verde);
     border-radius: 10px;
     height: 70px;
     margin-bottom: 1rem;
@@ -289,9 +317,3 @@ body {
     position: relative;
     top: 35%;
 }
-
-/* .editar_tarefa_data {
-    color: #333;
-    font-size: 0.9rem;
-    font-weight: bold;
-} */
