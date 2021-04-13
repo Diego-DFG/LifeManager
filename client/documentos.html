@@ -37,7 +37,7 @@
                     <h1>CATEGORIA</h1>
                     <div class="conteudo_meses">
                         <tr class="conteudo__container">
-                            <td><a href="#" onclick="tarefaController.importaRegistrosJaneiro()">Identificação</a></td>
+                            <td><a href="#" onclick="documentoController.importaDocumentos()">Identificação</a></td>
                             <input type="text" id="periodo_dia_janeiro" class="conteudo__dia form-control"/>
                             <button onclick="registroDiarioJaneiroController.importaRegistros()" class="btn-inserirDia" type="button">
                                 <i class="pesquisa fas fa-search"></i>
@@ -86,8 +86,8 @@
                     <h1>DOCUMENTOS</h1>
                     <div id="mensagemView"></div>
                     <form>
-                        <div id="tarefaView"></div>
-                        <button onclick="tarefaController.apaga()" class="btn btn-secondary" id="btn-apagar" type="button">
+                        <div id="documentoView"></div>
+                        <button onclick="documentoController.apaga()" class="btn btn-secondary" id="btn-apagar" type="button">
                             Limpar
                         </button>
                     </form>
@@ -185,6 +185,7 @@
         <script src='./js/app/helpers/cor-status-helper.js'></script>
         <script src='./js/app/helpers/limpaTarefas-helper.js'></script>
         <script src='./js/app/controllers/DocumentoController.js'></script>
+        <script src="./js/app/views/IdentificacaoView.js"></script>
         
         <script>
 

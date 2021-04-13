@@ -150,8 +150,22 @@ padding-top: 0.5em;
 font-weight: bold;
 }
 
-/******* Tabela Periodos **************/
+/******* Documentos **************/
 
+.documentos {
+    display: flex;
+}
+
+.documentos .identificacao {
+    height: 200px;
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+.documentos .identificacao__img {
+    height: 100%;
+    width: 100%;
+}
 
 .lixeira {
 position: relative;

@@ -9,6 +9,8 @@ class DocumentoController {
         this._inputObservacoes = $('#input__text_observacoes');
         this._inputArquivo = $('#input__arquivo');
 
+        this._identificacaoView = new IdentificacaoView($('#documentoView'));
+
     }
 
     adiciona(event) {
@@ -24,6 +26,18 @@ class DocumentoController {
         );
 
         console.log(documento);
+
+    }
+
+    importaDocumentos() {
+
+        this._identificacaoView.update();
+
+    }
+
+    apaga() {
+
+        document.querySelector('#documentoView').innerHTML = ``;
 
     }
 }
