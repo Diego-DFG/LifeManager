@@ -152,6 +152,10 @@ font-weight: bold;
 
 /******* Documentos **************/
 
+.documentos__titulo {
+    margin-bottom: 20px;
+}
+
 .documentos {
     display: flex;
 }
@@ -165,6 +169,21 @@ font-weight: bold;
 .documentos .identificacao__img {
     height: 100%;
     width: 100%;
+}
+
+.legislacao {
+    margin-bottom: 20px;
+}
+
+.legislacao__template {
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.legislacao__titulo {
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .lixeira {

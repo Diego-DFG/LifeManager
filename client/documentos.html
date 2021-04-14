@@ -37,14 +37,14 @@
                     <h1>CATEGORIA</h1>
                     <div class="conteudo_meses">
                         <tr class="conteudo__container">
-                            <td><a href="#" onclick="documentoController.importaDocumentos()">Identificação</a></td>
+                            <td><a href="#" onclick="documentoController.importaIdentificacao()">Identificação</a></td>
                             <input type="text" id="periodo_dia_janeiro" class="conteudo__dia form-control"/>
                             <button onclick="registroDiarioJaneiroController.importaRegistros()" class="btn-inserirDia" type="button">
                                 <i class="pesquisa fas fa-search"></i>
                             </button>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosFevereiro()">Laborais</a></td>
+                            <td><a href="#" onclick="documentoController.importaDocumentos()">Laborais</a></td>
                             <input type="text" id="periodo_dia_fevereiro" class="conteudo__dia form-control"/>
                             <button onclick="registroDiarioFevereiroController.importaRegistros()" class="btn-inserirDia" type="button">
                                 <i class="pesquisa fas fa-search"></i>
@@ -74,7 +74,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><a href="#" onclick="tarefaController.importaRegistrosJunho()">Legislação</a></td>
+                            <td><a href="#" onclick="documentoController.importaLegislacao()">Legislação</a></td>
                             <input type="text" id="periodo_dia_junho" class="conteudo__dia form-control" />
                             <button onclick="registroDiarioJunhoController.importaRegistros()" class="btn-inserirDia" type="button">
                                 <i class="pesquisa fas fa-search"></i>
@@ -90,83 +90,6 @@
                         <button onclick="documentoController.apaga()" class="btn btn-secondary" id="btn-apagar" type="button">
                             Limpar
                         </button>
-                    </form>
-                </div>
-                <div id="tabela_periodos" class="tabela_periodos container">
-                    <form onsubmit="documentoController.adiciona(event)">
-                        <div class="tabela_conteudo">
-                            <h1>CADASTRO</h1>
-                            <div class="semana">
-                                <div class="subCardSemana">
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Domingo" />
-                                        <span>D</span>
-                                    </div>
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Segunda" />
-                                        <span>S</span>
-                                    </div>
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Terça" />
-                                        <span>T</span>
-                                    </div>
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Quarta" />
-                                        <span>Q</span>
-                                    </div>
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Quinta" />
-                                        <span>Q</span>
-                                    </div>
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Sexta" />
-                                        <span>S</span>
-                                    </div>
-                                    <div class="cardSemana">
-                                        <input class="input_semana" type="checkbox" value="Sábado" />
-                                        <span>S</span>
-                                    </div>
-                                </div>
-                                <label id="label_semana"></label>
-                                <div class="cardData">
-                                    <h4>DATA</h4>
-                                    <input type="date" id="data" class="form-control">
-                                </div>
-                            </div>
-                            <div id="card_estudos" class="card__cadastro">
-                                <h4>DOCUMENTO</h4>
-                                <div id="cardNotas" class="card_01 cardNotas">
-                                    <input type="text" id="input__text_documento" class="form-control input"
-                                     placeholder="Insira a disciplina"/>
-                                    <div id="checkEstudos" class="checkViewEstudos"></div>
-                                </div>
-                            </div>
-                            <div id="card_projetos" class="card__cadastro">
-                                <h4>CATEGORIA</h4>
-                                <div class="cardNotas">
-                                    <input type="text" id="input__text_categoria" class="form-control input" 
-                                    placeholder="Insira o projeto"/>
-                                    <div id="checkProjetos" class="checkViewProjetos"></div>
-                                </div>
-                            </div>
-                            <div id="card_pessoal" class="card__cadastro">
-                                <h4>OBSERVAÇÕES</h4>
-                                <div class="cardNotas">
-                                    <textarea id="input__text_observacoes" class="form-control input" 
-                                    placeholder="Insira suas outras atividades"></textarea>
-                                    <div id="checkPessoal" class="checkViewPessoal"></div>
-                                </div>
-                            </div>
-                            <form id="formulario" method="post" enctype="multipart/form-data">
-                                <div id="card_arquivo" class="arquivo">
-                                    <h4>ARQUIVO</h4>
-                                    <div class="cardNotas">
-                                        <input id="input__arquivo" class="btn-selecionarArquivo" name="arquivo" type="file" />
-                                        <button class="btn btn-secondary">Enviar</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -186,6 +109,7 @@
         <script src='./js/app/helpers/limpaTarefas-helper.js'></script>
         <script src='./js/app/controllers/DocumentoController.js'></script>
         <script src="./js/app/views/IdentificacaoView.js"></script>
+        <script src="./js/app/views/LegislacaoView.js"></script>
         
         <script>
 

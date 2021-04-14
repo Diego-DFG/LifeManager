@@ -10,6 +10,7 @@ class DocumentoController {
         this._inputArquivo = $('#input__arquivo');
 
         this._identificacaoView = new IdentificacaoView($('#documentoView'));
+        this._legislacaoView = new LegislacaoView($('#documentoView'));
 
     }
 
@@ -29,9 +30,15 @@ class DocumentoController {
 
     }
 
-    importaDocumentos() {
+    importaIdentificacao() {
 
         this._identificacaoView.update();
+
+    }
+
+    importaLegislacao() {
+
+        this._legislacaoView.update();
 
     }
 
